@@ -1,0 +1,1001 @@
+Patient_ID,Age,Gender,Height_cm,Weight_kg,Blood_Pressure_Systolic,Blood_Pressure_Diastolic,Disease_Category
+1,10,Male,152,160.8,131,91,Healthy
+2,111,Female,172,31.1,134,100,Nephrology
+3,97,Female,159,24.7,147,87,Hypertension
+4,108,Female,146,61.3,159,99,Stroke
+5,8,Male,172,112.9,132,92,Healthy
+6,77,Female,173,126.8,152,74,Diabetes
+7,62,Male,157,129.2,151,89,Hypertension
+8,11,Female,148,39.7,113,96,Heart Disease
+9,65,Female,162,70.4,119,87,Cancer
+10,115,Female,164,28.4,130,84,Stroke
+11,41,Female,178,137.2,125,74,Heart Disease
+12,114,Female,171,155.7,136,80,Healthy
+13,42,Female,170,147.0,127,94,Heart Disease
+14,100,Female,151,138.0,143,99,Nephrology
+15,105,Male,146,52.5,120,73,Stroke
+16,35,Male,152,109.5,141,80,Nephrology
+17,4,Female,153,33.2,113,74,Nephrology
+18,20,Male,149,27.0,136,99,Stroke
+19,51,Female,146,30.2,160,73,Healthy
+20,82,Female,149,91.3,137,78,Nephrology
+21,81,Female,177,35.0,136,90,Hypertension
+22,19,Female,154,7.6,122,95,Healthy
+23,18,Male,157,36.2,159,89,Healthy
+24,84,Female,170,136.8,110,86,Nephrology
+25,3,Male,171,93.7,143,70,Diabetes
+26,18,Female,157,69.3,111,97,Hypertension
+27,35,Female,160,53.9,133,90,Hypertension
+28,86,Male,150,50.8,126,82,Healthy
+29,56,Female,151,73.3,153,84,Stroke
+30,90,Female,173,139.3,147,103,Hypertension
+31,91,Male,170,165.4,156,80,Healthy
+32,2,Male,169,19.6,123,98,Heart Disease
+33,50,Female,163,132.3,112,101,Cancer
+34,42,Male,155,6.5,135,89,Cancer
+35,46,Male,150,7.5,113,71,Nephrology
+36,109,Male,173,57.9,110,103,Cancer
+37,47,Male,171,43.4,126,89,Cancer
+38,96,Female,159,138.6,135,103,Hypertension
+39,85,Female,161,60.2,157,81,Healthy
+40,77,Male,154,24.8,151,85,Nephrology
+41,11,Female,156,7.6,118,85,Hypertension
+42,86,Male,176,133.0,116,76,Stroke
+43,29,Male,174,65.2,122,97,Heart Disease
+44,45,Female,149,51.2,144,85,Stroke
+45,50,Female,174,93.3,112,88,Cancer
+46,86,Male,163,86.8,143,79,Stroke
+47,9,Male,162,49.4,111,73,Healthy
+48,60,Male,145,158.7,118,99,Heart Disease
+49,69,Female,160,74.0,158,76,Nephrology
+50,76,Female,145,143.5,132,86,Hypertension
+51,84,Male,157,162.2,144,104,Stroke
+52,84,Male,171,46.0,116,77,Hypertension
+53,98,Female,164,123.0,120,97,Hypertension
+54,12,Male,168,102.5,142,86,Nephrology
+55,27,Male,162,32.1,110,88,Stroke
+56,93,Male,172,89.7,154,98,Hypertension
+57,75,Male,168,20.2,125,88,Nephrology
+58,18,Male,151,66.6,144,75,Heart Disease
+59,41,Female,177,21.6,150,101,Heart Disease
+60,9,Female,155,4.9,143,76,Heart Disease
+61,10,Female,178,64.8,157,78,Nephrology
+62,87,Female,169,82.3,129,103,Stroke
+63,24,Male,152,6.7,122,88,Stroke
+64,31,Female,177,115.4,124,98,Cancer
+65,64,Female,169,101.2,144,80,Heart Disease
+66,93,Female,146,113.9,117,74,Diabetes
+67,108,Male,177,99.0,125,93,Stroke
+68,42,Male,178,28.0,159,94,Hypertension
+69,63,Female,150,137.9,157,85,Heart Disease
+70,11,Female,168,11.7,115,102,Heart Disease
+71,35,Male,155,71.5,158,102,Nephrology
+72,12,Female,154,150.7,123,100,Nephrology
+73,89,Male,150,8.3,141,96,Cancer
+74,94,Male,150,115.7,117,82,Cancer
+75,85,Male,156,12.5,132,105,Diabetes
+76,86,Male,168,133.9,137,89,Stroke
+77,39,Female,147,44.8,144,77,Heart Disease
+78,35,Male,160,60.3,144,78,Stroke
+79,95,Male,159,112.6,121,93,Cancer
+80,54,Female,158,157.7,155,95,Cancer
+81,15,Male,174,53.5,132,76,Nephrology
+82,62,Male,151,65.3,133,83,Hypertension
+83,53,Female,167,146.6,117,95,Healthy
+84,97,Female,165,90.0,145,70,Diabetes
+85,55,Male,145,35.6,147,74,Cancer
+86,10,Female,168,92.5,127,104,Heart Disease
+87,114,Male,157,63.7,151,99,Diabetes
+88,11,Male,172,55.0,112,103,Diabetes
+89,75,Female,172,42.9,154,105,Heart Disease
+90,38,Female,147,62.0,116,100,Stroke
+91,69,Female,160,139.4,159,95,Stroke
+92,111,Female,147,56.4,115,70,Stroke
+93,109,Male,151,20.9,150,89,Nephrology
+94,104,Male,169,64.8,155,105,Diabetes
+95,39,Male,151,34.4,130,105,Stroke
+96,3,Female,175,165.1,136,86,Healthy
+97,104,Male,166,98.1,115,73,Hypertension
+98,46,Male,155,29.7,130,99,Heart Disease
+99,69,Male,164,157.5,145,82,Diabetes
+100,75,Male,172,139.7,113,71,Stroke
+101,70,Female,156,61.3,121,99,Hypertension
+102,63,Male,158,128.3,128,90,Cancer
+103,37,Female,177,120.0,148,93,Heart Disease
+104,72,Male,167,92.6,115,87,Cancer
+105,84,Male,166,31.6,122,95,Nephrology
+106,23,Male,161,63.2,146,90,Cancer
+107,33,Female,148,10.1,156,92,Stroke
+108,104,Male,155,47.2,124,92,Cancer
+109,31,Male,146,98.7,124,86,Healthy
+110,8,Male,171,111.0,146,82,Diabetes
+111,65,Male,147,166.6,112,84,Diabetes
+112,44,Male,175,30.9,115,90,Cancer
+113,37,Female,164,97.5,120,94,Hypertension
+114,98,Female,152,54.5,149,102,Heart Disease
+115,104,Male,151,60.1,116,82,Nephrology
+116,96,Male,160,13.3,120,71,Cancer
+117,77,Male,162,110.9,115,101,Heart Disease
+118,101,Male,167,29.8,128,84,Stroke
+119,28,Male,176,76.4,134,89,Nephrology
+120,36,Female,160,149.6,128,74,Hypertension
+121,82,Male,167,100.0,156,77,Heart Disease
+122,42,Female,152,30.6,157,73,Diabetes
+123,81,Male,155,141.2,146,81,Diabetes
+124,69,Female,157,18.5,149,91,Diabetes
+125,66,Female,167,110.6,119,78,Stroke
+126,79,Male,176,75.5,143,94,Diabetes
+127,1,Female,174,77.4,150,98,Cancer
+128,86,Female,159,160.2,124,84,Stroke
+129,83,Female,163,158.4,145,96,Diabetes
+130,47,Male,150,62.3,130,104,Diabetes
+131,71,Female,178,150.5,152,99,Healthy
+132,25,Female,147,108.8,111,101,Healthy
+133,18,Male,168,83.4,143,82,Cancer
+134,51,Female,159,64.0,127,93,Cancer
+135,109,Male,149,7.5,146,88,Healthy
+136,55,Male,157,113.6,148,81,Healthy
+137,109,Female,148,98.6,130,94,Hypertension
+138,76,Female,171,157.5,125,86,Healthy
+139,59,Male,154,83.5,126,105,Hypertension
+140,56,Male,149,13.3,144,92,Hypertension
+141,30,Female,155,102.0,119,76,Heart Disease
+142,56,Male,178,80.5,115,90,Heart Disease
+143,36,Male,155,44.3,148,89,Cancer
+144,91,Female,145,38.2,152,87,Cancer
+145,23,Female,177,112.0,153,104,Nephrology
+146,22,Female,174,115.8,152,92,Heart Disease
+147,19,Male,151,164.2,156,77,Heart Disease
+148,42,Male,151,52.7,119,104,Diabetes
+149,25,Female,153,76.3,134,73,Stroke
+150,41,Female,166,127.8,133,78,Cancer
+151,26,Female,164,18.4,113,97,Healthy
+152,68,Female,146,104.9,155,78,Hypertension
+153,82,Female,173,128.1,133,88,Nephrology
+154,71,Female,166,5.9,145,93,Heart Disease
+155,18,Female,155,18.0,159,73,Heart Disease
+156,60,Female,161,114.6,137,76,Nephrology
+157,47,Female,171,90.4,112,72,Diabetes
+158,65,Female,160,49.9,150,70,Diabetes
+159,63,Male,165,6.2,144,93,Nephrology
+160,56,Female,147,107.0,146,83,Stroke
+161,101,Female,147,21.0,135,99,Healthy
+162,44,Male,156,29.6,132,85,Hypertension
+163,5,Male,170,75.3,154,93,Cancer
+164,96,Female,169,90.3,132,75,Stroke
+165,11,Female,151,5.5,141,78,Healthy
+166,80,Male,173,19.9,148,99,Nephrology
+167,51,Male,165,120.5,138,85,Diabetes
+168,45,Female,175,116.7,149,80,Heart Disease
+169,78,Male,175,62.5,147,72,Stroke
+170,70,Female,153,116.5,119,83,Nephrology
+171,90,Female,169,38.1,136,75,Healthy
+172,106,Female,153,152.2,121,85,Stroke
+173,87,Female,145,117.7,134,81,Healthy
+174,59,Male,152,105.7,139,79,Diabetes
+175,57,Female,156,89.8,154,82,Hypertension
+176,24,Male,149,10.6,127,78,Healthy
+177,13,Male,177,23.9,139,103,Diabetes
+178,104,Male,151,6.3,114,70,Stroke
+179,81,Female,154,115.1,115,80,Nephrology
+180,83,Male,167,112.8,153,72,Hypertension
+181,30,Female,150,117.7,138,101,Diabetes
+182,64,Male,174,10.7,143,71,Nephrology
+183,88,Male,172,40.3,144,97,Nephrology
+184,6,Female,168,138.9,110,83,Healthy
+185,67,Female,160,39.4,111,94,Diabetes
+186,25,Male,172,122.3,116,89,Hypertension
+187,29,Male,148,36.0,135,72,Heart Disease
+188,71,Female,161,99.4,126,88,Nephrology
+189,77,Female,161,92.9,139,73,Stroke
+190,97,Female,155,98.8,152,82,Cancer
+191,48,Female,156,73.3,146,77,Stroke
+192,99,Male,177,64.4,149,87,Cancer
+193,59,Male,160,124.9,128,83,Cancer
+194,42,Female,150,64.7,133,102,Healthy
+195,100,Female,145,52.8,117,99,Heart Disease
+196,9,Female,163,63.8,155,73,Diabetes
+197,109,Male,152,143.2,146,75,Nephrology
+198,74,Male,146,61.2,126,82,Nephrology
+199,104,Male,155,162.5,118,71,Cancer
+200,58,Male,150,36.6,146,101,Nephrology
+201,20,Male,162,73.8,144,82,Stroke
+202,39,Male,161,131.7,150,75,Cancer
+203,89,Male,156,143.9,157,105,Nephrology
+204,51,Female,164,99.6,143,103,Hypertension
+205,39,Female,145,4.9,123,91,Stroke
+206,8,Male,167,159.1,120,74,Healthy
+207,47,Female,178,93.9,134,102,Nephrology
+208,73,Female,160,164.7,159,104,Stroke
+209,24,Female,152,15.6,153,77,Nephrology
+210,80,Male,147,101.5,122,102,Nephrology
+211,2,Female,173,84.4,120,84,Hypertension
+212,5,Female,156,85.4,138,89,Stroke
+213,43,Female,173,71.8,131,81,Stroke
+214,37,Female,145,147.7,130,79,Healthy
+215,91,Female,167,12.1,145,91,Stroke
+216,18,Male,150,41.0,124,98,Stroke
+217,80,Male,178,155.5,125,87,Stroke
+218,29,Female,170,45.2,146,83,Diabetes
+219,87,Female,148,121.4,128,96,Cancer
+220,22,Female,153,76.6,134,92,Stroke
+221,106,Male,158,45.7,143,102,Nephrology
+222,73,Male,145,89.3,119,87,Heart Disease
+223,2,Female,170,10.6,130,76,Diabetes
+224,94,Male,169,83.4,159,83,Diabetes
+225,47,Female,148,32.3,125,81,Cancer
+226,44,Male,176,73.6,158,100,Nephrology
+227,58,Male,153,107.4,123,84,Heart Disease
+228,67,Male,146,154.6,140,103,Hypertension
+229,26,Male,145,20.0,113,81,Hypertension
+230,43,Male,158,72.2,156,89,Diabetes
+231,92,Male,150,70.3,159,86,Stroke
+232,78,Male,155,41.6,116,71,Heart Disease
+233,65,Male,155,42.4,124,77,Diabetes
+234,59,Female,155,149.6,139,78,Healthy
+235,17,Male,147,9.2,112,104,Nephrology
+236,94,Male,168,119.3,157,100,Healthy
+237,45,Male,159,122.7,127,92,Heart Disease
+238,69,Male,161,162.4,137,105,Hypertension
+239,100,Male,153,36.5,129,94,Heart Disease
+240,114,Female,158,114.9,117,102,Hypertension
+241,92,Female,153,48.9,125,91,Hypertension
+242,73,Female,154,156.3,121,85,Hypertension
+243,21,Female,167,50.8,124,77,Hypertension
+244,69,Male,173,45.6,147,70,Diabetes
+245,68,Female,146,74.4,123,88,Nephrology
+246,13,Male,166,70.6,139,93,Stroke
+247,52,Female,152,23.4,139,89,Diabetes
+248,53,Female,152,8.6,118,104,Healthy
+249,83,Female,163,109.9,142,90,Nephrology
+250,7,Female,164,26.0,154,79,Diabetes
+251,54,Male,150,164.0,155,91,Diabetes
+252,94,Male,157,115.6,133,76,Diabetes
+253,14,Female,148,84.1,129,79,Stroke
+254,86,Female,167,116.9,140,87,Stroke
+255,87,Male,164,99.8,137,73,Healthy
+256,64,Female,156,116.8,157,95,Hypertension
+257,56,Male,178,90.3,127,86,Cancer
+258,105,Female,166,96.3,132,91,Hypertension
+259,77,Female,155,43.0,156,75,Hypertension
+260,27,Male,177,149.8,140,87,Healthy
+261,56,Female,176,99.5,160,103,Healthy
+262,32,Male,174,110.3,123,97,Stroke
+263,92,Female,146,58.4,155,90,Diabetes
+264,91,Male,166,83.3,154,71,Healthy
+265,76,Female,174,128.3,113,76,Diabetes
+266,22,Female,151,18.2,133,77,Stroke
+267,62,Male,163,92.1,140,88,Stroke
+268,14,Female,169,14.0,118,71,Healthy
+269,90,Male,153,142.5,113,71,Stroke
+270,14,Male,177,49.8,134,72,Healthy
+271,77,Female,174,22.6,135,75,Cancer
+272,39,Female,146,120.9,143,95,Healthy
+273,61,Female,169,25.1,110,71,Cancer
+274,2,Male,176,117.0,147,82,Diabetes
+275,71,Male,157,148.4,117,86,Stroke
+276,103,Male,161,111.6,133,73,Heart Disease
+277,21,Male,176,71.2,118,103,Nephrology
+278,92,Female,147,37.1,126,78,Cancer
+279,84,Male,155,74.4,130,90,Heart Disease
+280,77,Female,162,155.0,124,82,Diabetes
+281,6,Male,159,124.1,127,101,Heart Disease
+282,24,Female,166,135.3,114,92,Healthy
+283,78,Male,153,49.4,153,82,Diabetes
+284,3,Male,155,126.5,135,98,Heart Disease
+285,106,Male,172,132.0,144,79,Heart Disease
+286,66,Male,158,13.8,122,105,Cancer
+287,26,Male,175,112.3,144,103,Cancer
+288,7,Male,153,80.5,112,89,Heart Disease
+289,77,Female,156,154.5,143,101,Diabetes
+290,47,Female,174,34.6,134,71,Heart Disease
+291,71,Male,170,149.4,135,72,Stroke
+292,23,Female,163,94.2,112,80,Hypertension
+293,7,Female,150,67.5,141,73,Stroke
+294,22,Female,177,68.4,144,77,Heart Disease
+295,99,Male,168,60.7,147,77,Healthy
+296,57,Female,174,90.3,121,101,Nephrology
+297,107,Male,150,4.3,149,102,Cancer
+298,56,Male,146,117.0,131,89,Healthy
+299,107,Male,175,161.6,151,70,Heart Disease
+300,98,Male,145,132.5,110,89,Stroke
+301,34,Female,154,119.3,132,92,Diabetes
+302,19,Male,160,37.0,142,103,Stroke
+303,23,Female,147,15.1,135,81,Stroke
+304,10,Male,159,116.2,122,83,Stroke
+305,76,Male,164,45.7,133,103,Heart Disease
+306,113,Male,174,34.6,136,90,Cancer
+307,30,Male,174,118.6,151,73,Nephrology
+308,103,Female,170,110.1,128,102,Stroke
+309,8,Female,149,109.1,123,85,Diabetes
+310,71,Male,149,6.3,154,104,Stroke
+311,106,Female,173,12.1,151,88,Cancer
+312,17,Male,148,72.2,129,78,Nephrology
+313,81,Female,171,155.6,129,95,Hypertension
+314,15,Female,157,13.7,134,78,Diabetes
+315,76,Female,163,80.8,152,85,Healthy
+316,71,Female,162,2.1,117,75,Heart Disease
+317,32,Male,176,41.8,135,84,Cancer
+318,17,Female,156,161.9,150,105,Nephrology
+319,41,Male,175,119.1,137,90,Stroke
+320,11,Male,148,26.8,127,71,Stroke
+321,99,Female,159,32.0,115,93,Cancer
+322,46,Female,175,151.1,144,96,Diabetes
+323,39,Male,148,162.2,118,72,Stroke
+324,6,Male,156,36.7,149,99,Cancer
+325,29,Female,176,48.6,130,96,Stroke
+326,40,Female,155,127.9,157,78,Nephrology
+327,11,Male,147,88.8,147,71,Healthy
+328,99,Female,166,107.3,146,103,Diabetes
+329,34,Male,165,119.5,111,104,Diabetes
+330,46,Female,160,89.9,154,95,Hypertension
+331,40,Male,149,147.5,144,78,Cancer
+332,49,Female,160,33.3,153,72,Stroke
+333,109,Female,147,28.0,139,85,Stroke
+334,114,Female,146,164.1,127,71,Diabetes
+335,29,Male,146,90.8,160,88,Stroke
+336,105,Male,172,60.4,139,81,Cancer
+337,67,Male,147,45.2,113,76,Healthy
+338,110,Male,150,132.7,126,102,Cancer
+339,40,Male,173,144.1,122,71,Stroke
+340,12,Female,164,145.8,137,105,Stroke
+341,29,Female,167,157.2,145,92,Heart Disease
+342,59,Female,145,129.7,157,86,Stroke
+343,26,Female,160,160.1,142,71,Stroke
+344,6,Male,156,99.9,136,88,Hypertension
+345,109,Female,156,95.8,115,71,Cancer
+346,80,Female,178,147.4,112,77,Nephrology
+347,33,Male,169,24.2,133,71,Healthy
+348,108,Female,166,25.0,157,86,Heart Disease
+349,113,Female,173,45.2,135,72,Stroke
+350,5,Male,178,8.0,159,70,Hypertension
+351,80,Male,159,15.0,139,71,Hypertension
+352,33,Male,149,117.1,121,92,Nephrology
+353,21,Female,166,126.3,156,71,Hypertension
+354,114,Male,165,53.7,149,99,Nephrology
+355,95,Female,157,64.0,123,104,Cancer
+356,38,Female,164,140.0,126,88,Heart Disease
+357,43,Female,160,97.2,149,96,Heart Disease
+358,96,Female,177,74.4,110,103,Nephrology
+359,43,Male,176,105.2,153,102,Hypertension
+360,4,Male,168,143.7,132,101,Diabetes
+361,113,Female,164,16.9,139,83,Hypertension
+362,72,Male,161,112.1,137,78,Heart Disease
+363,30,Female,165,117.8,140,84,Heart Disease
+364,93,Female,149,28.6,121,92,Cancer
+365,51,Female,157,87.3,134,105,Heart Disease
+366,90,Female,157,128.7,141,90,Cancer
+367,115,Female,176,76.9,156,94,Diabetes
+368,36,Female,165,137.5,145,71,Nephrology
+369,54,Male,178,32.9,118,82,Stroke
+370,33,Female,151,73.9,159,72,Hypertension
+371,68,Female,178,67.5,141,78,Hypertension
+372,82,Female,174,115.7,120,94,Heart Disease
+373,53,Female,153,151.6,152,77,Stroke
+374,87,Male,167,12.4,155,70,Stroke
+375,88,Male,146,118.5,125,79,Nephrology
+376,59,Female,164,159.0,132,97,Heart Disease
+377,23,Male,159,144.6,113,77,Hypertension
+378,86,Male,167,52.9,140,104,Cancer
+379,87,Male,148,24.9,153,97,Nephrology
+380,92,Female,151,68.7,137,74,Nephrology
+381,54,Female,151,93.7,122,90,Heart Disease
+382,105,Male,152,52.3,125,97,Heart Disease
+383,83,Male,174,133.7,136,79,Healthy
+384,94,Male,149,12.0,140,87,Cancer
+385,88,Male,163,137.0,128,103,Hypertension
+386,21,Male,165,84.6,118,105,Stroke
+387,7,Female,162,109.1,122,72,Hypertension
+388,97,Female,162,11.0,125,90,Nephrology
+389,80,Female,157,108.3,130,91,Hypertension
+390,75,Female,150,141.6,110,100,Healthy
+391,109,Female,149,158.5,120,86,Hypertension
+392,92,Male,173,161.3,159,102,Healthy
+393,3,Female,169,41.6,144,80,Hypertension
+394,49,Male,163,136.2,120,71,Healthy
+395,74,Male,163,77.0,120,105,Nephrology
+396,18,Male,162,70.6,145,105,Diabetes
+397,105,Male,175,123.5,130,70,Hypertension
+398,59,Female,178,143.7,152,91,Healthy
+399,78,Female,147,42.9,158,93,Diabetes
+400,81,Female,177,40.4,124,78,Nephrology
+401,13,Female,154,88.4,147,99,Nephrology
+402,6,Female,155,69.4,136,74,Diabetes
+403,109,Female,145,116.2,128,76,Hypertension
+404,11,Female,168,21.4,114,98,Stroke
+405,15,Female,167,7.5,126,87,Healthy
+406,105,Male,156,127.5,129,86,Diabetes
+407,105,Female,155,79.1,115,93,Stroke
+408,33,Female,177,80.2,155,96,Heart Disease
+409,9,Male,154,72.5,160,77,Hypertension
+410,57,Male,176,120.6,157,79,Heart Disease
+411,68,Female,174,61.1,112,105,Healthy
+412,3,Male,168,141.2,145,87,Hypertension
+413,53,Male,151,23.8,110,79,Healthy
+414,34,Male,149,93.8,154,70,Heart Disease
+415,100,Female,168,62.9,138,79,Cancer
+416,24,Male,168,49.9,136,88,Diabetes
+417,87,Female,171,97.5,147,90,Stroke
+418,5,Male,154,151.5,125,86,Diabetes
+419,5,Male,149,4.3,125,94,Heart Disease
+420,48,Female,171,160.7,140,76,Hypertension
+421,115,Male,150,31.0,159,71,Hypertension
+422,2,Male,154,117.7,144,92,Stroke
+423,17,Female,154,3.2,110,86,Cancer
+424,70,Female,151,146.8,143,75,Nephrology
+425,64,Male,166,8.8,119,81,Hypertension
+426,23,Male,173,44.6,119,103,Stroke
+427,89,Female,164,96.2,122,101,Heart Disease
+428,92,Male,150,2.1,112,103,Hypertension
+429,86,Female,171,78.6,124,95,Healthy
+430,95,Male,168,77.8,115,87,Cancer
+431,63,Male,172,26.5,121,98,Healthy
+432,61,Male,148,112.4,116,71,Stroke
+433,114,Male,168,71.9,153,76,Heart Disease
+434,115,Female,145,49.6,132,89,Heart Disease
+435,90,Male,150,84.0,126,73,Diabetes
+436,91,Male,159,12.6,156,81,Stroke
+437,99,Female,178,114.3,131,84,Hypertension
+438,54,Female,163,78.4,126,72,Heart Disease
+439,57,Male,168,101.4,132,102,Cancer
+440,70,Male,154,87.9,114,91,Healthy
+441,57,Female,168,114.2,157,79,Stroke
+442,52,Male,151,58.2,135,74,Diabetes
+443,89,Male,162,40.9,155,102,Diabetes
+444,16,Female,177,77.4,158,72,Hypertension
+445,30,Female,171,139.7,151,79,Stroke
+446,52,Male,165,83.4,134,93,Stroke
+447,31,Male,170,132.5,140,71,Healthy
+448,75,Male,176,13.7,143,80,Diabetes
+449,67,Male,168,146.1,126,104,Diabetes
+450,105,Male,157,125.2,149,95,Heart Disease
+451,23,Male,151,128.3,112,89,Hypertension
+452,97,Male,165,25.6,153,91,Stroke
+453,51,Male,165,89.5,115,93,Cancer
+454,67,Female,151,101.2,126,99,Heart Disease
+455,96,Female,177,105.7,123,86,Hypertension
+456,43,Male,152,103.5,155,103,Cancer
+457,62,Female,165,41.4,156,80,Hypertension
+458,21,Female,151,86.3,138,94,Diabetes
+459,65,Male,152,32.6,135,80,Hypertension
+460,111,Male,172,142.4,126,82,Diabetes
+461,41,Male,147,14.1,113,90,Cancer
+462,100,Female,157,120.2,120,89,Nephrology
+463,27,Female,161,91.9,159,95,Hypertension
+464,84,Male,158,67.2,139,83,Cancer
+465,92,Male,151,29.0,137,95,Healthy
+466,101,Male,150,83.0,113,97,Cancer
+467,20,Female,167,17.5,154,86,Heart Disease
+468,18,Female,162,166.8,117,70,Hypertension
+469,61,Male,173,136.6,137,78,Diabetes
+470,70,Male,148,90.4,150,92,Nephrology
+471,5,Female,176,148.6,147,70,Hypertension
+472,1,Female,176,83.7,147,98,Heart Disease
+473,88,Male,173,133.6,127,86,Cancer
+474,16,Male,147,63.9,150,87,Heart Disease
+475,46,Female,173,16.0,138,75,Heart Disease
+476,24,Female,149,127.7,149,96,Heart Disease
+477,65,Male,157,74.2,110,87,Diabetes
+478,59,Female,146,126.6,111,86,Healthy
+479,67,Female,174,18.7,147,87,Cancer
+480,97,Male,172,45.6,112,100,Stroke
+481,23,Female,174,113.9,117,85,Cancer
+482,41,Male,174,155.0,136,100,Nephrology
+483,18,Female,147,84.4,121,100,Stroke
+484,103,Female,169,63.6,149,105,Heart Disease
+485,109,Male,157,74.0,135,104,Stroke
+486,76,Female,152,102.2,124,76,Hypertension
+487,38,Male,176,113.6,123,104,Nephrology
+488,74,Male,166,26.0,126,76,Diabetes
+489,23,Female,168,57.8,149,89,Nephrology
+490,75,Male,168,104.8,133,79,Cancer
+491,89,Female,169,98.8,130,75,Hypertension
+492,65,Male,177,84.4,144,87,Nephrology
+493,38,Male,162,14.9,128,82,Diabetes
+494,109,Female,175,52.4,142,77,Nephrology
+495,58,Female,155,83.8,125,105,Nephrology
+496,106,Female,176,31.4,143,72,Nephrology
+497,28,Male,174,72.7,145,104,Cancer
+498,66,Male,167,29.3,140,70,Stroke
+499,29,Male,157,104.9,112,71,Heart Disease
+500,39,Male,154,92.8,130,95,Diabetes
+501,91,Female,158,22.8,156,79,Stroke
+502,36,Male,171,136.2,137,104,Heart Disease
+503,95,Male,153,162.3,131,71,Healthy
+504,90,Male,160,87.9,126,82,Hypertension
+505,18,Male,174,112.9,153,82,Nephrology
+506,87,Male,160,138.2,129,87,Hypertension
+507,59,Female,175,84.8,141,72,Stroke
+508,34,Male,168,138.2,132,74,Hypertension
+509,25,Female,159,11.7,158,101,Diabetes
+510,3,Female,172,40.0,151,74,Stroke
+511,85,Female,176,103.2,151,83,Hypertension
+512,86,Female,146,91.6,110,80,Heart Disease
+513,86,Female,166,35.4,156,105,Stroke
+514,25,Female,146,104.6,158,87,Heart Disease
+515,108,Male,173,41.9,149,85,Healthy
+516,1,Male,169,30.7,131,74,Cancer
+517,113,Male,156,129.4,124,103,Stroke
+518,64,Female,159,94.7,145,100,Heart Disease
+519,109,Male,151,78.8,146,100,Healthy
+520,115,Female,168,118.0,154,78,Heart Disease
+521,5,Male,163,42.3,122,104,Diabetes
+522,37,Male,161,130.4,121,101,Nephrology
+523,30,Male,153,141.4,132,83,Diabetes
+524,72,Male,156,129.8,155,95,Diabetes
+525,99,Male,167,94.1,156,89,Hypertension
+526,27,Female,145,34.3,126,81,Cancer
+527,74,Male,163,109.4,153,89,Heart Disease
+528,73,Male,152,138.5,157,103,Diabetes
+529,71,Male,148,89.4,149,82,Hypertension
+530,85,Male,152,133.0,121,81,Nephrology
+531,83,Male,169,154.5,134,98,Diabetes
+532,10,Female,157,19.9,122,98,Heart Disease
+533,13,Female,177,156.8,124,101,Stroke
+534,68,Male,171,52.1,158,82,Hypertension
+535,86,Female,163,143.0,140,97,Stroke
+536,76,Female,161,89.6,145,88,Healthy
+537,104,Male,169,23.2,135,93,Stroke
+538,63,Male,173,72.2,130,87,Stroke
+539,70,Female,146,140.6,153,101,Hypertension
+540,95,Male,153,106.4,110,87,Nephrology
+541,110,Male,172,156.7,113,98,Heart Disease
+542,98,Male,158,33.7,143,72,Nephrology
+543,100,Female,175,43.8,118,105,Nephrology
+544,57,Male,164,60.6,153,101,Cancer
+545,79,Male,161,27.5,126,74,Healthy
+546,63,Male,148,138.6,145,75,Stroke
+547,6,Female,171,45.3,124,102,Stroke
+548,74,Male,155,162.4,116,78,Heart Disease
+549,66,Female,155,79.4,136,99,Diabetes
+550,111,Male,177,141.9,119,76,Diabetes
+551,58,Female,152,129.7,149,86,Hypertension
+552,38,Female,149,77.8,132,72,Cancer
+553,76,Male,161,21.1,114,74,Healthy
+554,49,Male,165,146.1,147,75,Stroke
+555,7,Female,145,131.9,156,83,Cancer
+556,29,Female,173,61.6,149,73,Heart Disease
+557,60,Female,176,61.7,155,100,Cancer
+558,73,Male,170,132.1,127,84,Healthy
+559,16,Male,159,75.3,133,70,Healthy
+560,21,Female,148,45.6,151,95,Healthy
+561,83,Female,156,136.9,148,77,Healthy
+562,86,Male,167,104.6,137,96,Heart Disease
+563,27,Female,156,137.9,127,78,Healthy
+564,92,Male,155,145.1,146,99,Healthy
+565,110,Male,178,17.2,126,87,Diabetes
+566,76,Male,151,163.9,136,74,Hypertension
+567,21,Male,147,72.2,131,100,Stroke
+568,26,Male,145,10.6,151,91,Healthy
+569,14,Male,157,52.2,124,103,Nephrology
+570,13,Male,146,77.9,128,86,Nephrology
+571,8,Female,169,20.4,125,77,Nephrology
+572,93,Female,147,122.7,145,93,Healthy
+573,46,Male,173,79.6,149,93,Diabetes
+574,89,Male,151,69.5,110,91,Heart Disease
+575,5,Male,153,55.5,160,93,Hypertension
+576,10,Male,150,118.1,140,94,Cancer
+577,95,Male,169,38.0,125,71,Stroke
+578,72,Male,176,43.2,136,98,Nephrology
+579,11,Male,172,161.6,142,94,Healthy
+580,60,Female,173,113.5,142,83,Diabetes
+581,31,Male,170,2.5,151,73,Healthy
+582,84,Male,158,87.4,142,90,Stroke
+583,113,Female,159,40.7,146,91,Heart Disease
+584,60,Female,147,76.3,152,76,Hypertension
+585,107,Female,153,90.9,146,86,Stroke
+586,107,Male,155,31.2,120,101,Healthy
+587,104,Male,168,122.8,114,104,Diabetes
+588,25,Female,152,38.2,125,76,Cancer
+589,21,Female,173,136.8,152,75,Stroke
+590,86,Female,152,79.7,150,82,Hypertension
+591,29,Male,173,5.9,147,104,Cancer
+592,106,Male,173,115.8,120,75,Hypertension
+593,100,Female,171,79.1,152,96,Cancer
+594,36,Male,150,138.0,141,72,Stroke
+595,69,Female,177,73.5,129,104,Healthy
+596,15,Female,160,76.0,124,87,Hypertension
+597,42,Male,162,39.3,128,97,Nephrology
+598,67,Female,176,83.0,141,86,Healthy
+599,22,Female,163,45.4,128,82,Nephrology
+600,31,Male,155,139.9,149,86,Hypertension
+601,48,Female,162,63.0,148,95,Cancer
+602,16,Male,147,136.9,116,81,Stroke
+603,99,Female,166,164.7,129,105,Heart Disease
+604,23,Male,146,161.7,120,81,Heart Disease
+605,114,Male,147,31.9,149,96,Healthy
+606,93,Male,162,67.0,138,101,Nephrology
+607,4,Female,175,127.6,154,99,Nephrology
+608,18,Male,158,72.7,151,94,Hypertension
+609,98,Male,158,103.5,156,93,Hypertension
+610,47,Female,165,5.6,125,71,Heart Disease
+611,72,Female,165,131.7,136,81,Stroke
+612,20,Male,149,83.6,111,75,Nephrology
+613,102,Male,156,123.3,137,83,Heart Disease
+614,98,Female,146,100.8,155,91,Diabetes
+615,85,Male,169,39.3,154,82,Hypertension
+616,55,Female,156,95.3,131,71,Healthy
+617,28,Male,169,71.0,115,93,Stroke
+618,81,Male,145,50.8,113,79,Nephrology
+619,66,Male,174,51.5,113,80,Cancer
+620,67,Female,150,76.2,159,85,Hypertension
+621,73,Female,165,49.5,137,98,Diabetes
+622,17,Male,150,8.9,129,70,Heart Disease
+623,84,Female,147,34.6,122,71,Hypertension
+624,8,Male,155,57.1,138,91,Hypertension
+625,64,Female,160,123.5,138,95,Diabetes
+626,93,Male,175,49.3,148,102,Stroke
+627,109,Female,177,73.3,124,92,Hypertension
+628,48,Female,151,4.4,139,94,Heart Disease
+629,15,Female,150,78.2,114,75,Diabetes
+630,78,Male,145,79.2,115,87,Heart Disease
+631,50,Female,174,42.1,112,90,Cancer
+632,108,Male,167,146.2,148,92,Hypertension
+633,1,Male,148,100.6,146,104,Healthy
+634,67,Female,175,148.8,147,78,Nephrology
+635,54,Male,169,145.5,121,87,Cancer
+636,6,Female,158,7.4,110,87,Cancer
+637,5,Female,170,46.7,117,88,Heart Disease
+638,81,Male,157,102.3,110,103,Heart Disease
+639,30,Female,159,127.9,122,75,Heart Disease
+640,57,Male,147,97.3,110,73,Stroke
+641,68,Male,164,120.0,112,93,Nephrology
+642,1,Male,152,153.0,152,77,Nephrology
+643,47,Male,153,162.3,117,79,Cancer
+644,78,Male,172,81.3,155,84,Hypertension
+645,18,Male,147,129.7,142,74,Diabetes
+646,95,Female,166,42.1,159,91,Cancer
+647,57,Female,155,55.7,110,101,Hypertension
+648,43,Female,151,38.5,133,89,Cancer
+649,32,Female,171,57.8,111,71,Hypertension
+650,75,Female,153,50.8,127,70,Healthy
+651,102,Female,178,55.8,157,88,Cancer
+652,92,Female,156,98.7,119,92,Diabetes
+653,84,Male,151,161.6,131,100,Nephrology
+654,64,Female,165,49.0,115,89,Heart Disease
+655,71,Female,172,18.1,150,82,Heart Disease
+656,103,Female,162,4.8,111,77,Nephrology
+657,105,Male,175,19.1,159,93,Stroke
+658,79,Male,145,8.7,141,96,Cancer
+659,97,Female,147,21.5,114,99,Heart Disease
+660,14,Male,163,84.0,112,75,Nephrology
+661,73,Female,170,108.4,118,100,Heart Disease
+662,36,Male,178,73.0,110,86,Hypertension
+663,100,Female,173,14.4,116,95,Stroke
+664,45,Male,166,47.7,123,93,Stroke
+665,98,Male,151,116.1,142,103,Healthy
+666,86,Male,177,14.8,140,101,Heart Disease
+667,23,Female,162,83.0,110,96,Heart Disease
+668,99,Male,156,147.9,133,74,Stroke
+669,104,Female,154,102.6,112,88,Diabetes
+670,68,Male,150,79.2,147,92,Cancer
+671,73,Female,158,18.4,115,89,Diabetes
+672,2,Male,153,81.3,134,73,Healthy
+673,83,Female,156,3.4,130,90,Cancer
+674,96,Female,176,74.5,155,84,Cancer
+675,44,Male,162,68.6,140,73,Diabetes
+676,59,Female,177,155.7,117,94,Hypertension
+677,107,Female,177,87.3,113,71,Stroke
+678,111,Male,169,53.9,148,92,Diabetes
+679,53,Male,163,90.6,126,92,Cancer
+680,32,Female,150,147.6,125,77,Heart Disease
+681,46,Male,161,73.5,150,78,Stroke
+682,46,Male,168,94.7,160,80,Hypertension
+683,114,Female,147,9.7,147,78,Healthy
+684,34,Female,165,115.3,149,77,Cancer
+685,78,Female,149,86.5,155,99,Stroke
+686,64,Male,145,103.7,126,71,Cancer
+687,91,Female,169,80.3,113,94,Heart Disease
+688,11,Female,171,113.2,133,104,Heart Disease
+689,99,Male,161,134.2,158,88,Nephrology
+690,87,Female,154,107.6,151,75,Nephrology
+691,3,Female,161,19.9,110,102,Healthy
+692,94,Female,158,105.1,121,85,Hypertension
+693,11,Male,166,92.4,112,72,Hypertension
+694,1,Female,157,72.7,153,101,Nephrology
+695,33,Male,175,93.3,150,99,Stroke
+696,102,Female,151,160.8,137,77,Heart Disease
+697,54,Female,168,60.3,123,77,Healthy
+698,97,Female,178,101.8,152,92,Healthy
+699,43,Female,166,21.9,124,73,Stroke
+700,89,Male,170,145.3,134,98,Nephrology
+701,84,Male,167,162.0,110,76,Cancer
+702,28,Male,171,148.8,148,94,Nephrology
+703,16,Male,156,64.7,118,85,Nephrology
+704,40,Female,171,149.4,127,92,Cancer
+705,73,Male,148,117.3,133,84,Heart Disease
+706,17,Male,147,22.0,159,82,Nephrology
+707,94,Male,163,87.5,151,76,Diabetes
+708,28,Female,153,136.4,157,82,Cancer
+709,66,Female,165,146.9,150,95,Nephrology
+710,43,Male,157,81.1,153,104,Stroke
+711,60,Male,173,112.4,143,86,Nephrology
+712,86,Male,150,33.7,117,91,Stroke
+713,30,Male,174,80.5,147,98,Heart Disease
+714,109,Male,148,110.9,136,78,Heart Disease
+715,95,Female,157,135.4,157,70,Diabetes
+716,49,Female,163,67.8,145,96,Diabetes
+717,26,Male,145,61.0,130,70,Heart Disease
+718,104,Male,167,23.0,141,78,Diabetes
+719,1,Female,147,13.7,153,102,Hypertension
+720,43,Female,166,162.2,155,100,Healthy
+721,112,Female,172,64.7,113,90,Hypertension
+722,101,Male,167,147.1,142,98,Hypertension
+723,73,Male,150,100.7,130,91,Heart Disease
+724,73,Female,167,161.3,115,93,Nephrology
+725,48,Female,172,31.8,110,79,Stroke
+726,98,Female,150,68.9,141,92,Diabetes
+727,48,Female,147,154.9,138,74,Cancer
+728,40,Male,172,105.0,134,80,Diabetes
+729,55,Female,154,137.6,124,102,Hypertension
+730,108,Female,175,60.9,148,82,Healthy
+731,98,Female,146,38.9,157,100,Nephrology
+732,56,Female,170,17.1,113,78,Hypertension
+733,80,Male,173,107.4,152,78,Heart Disease
+734,55,Male,147,24.0,130,101,Healthy
+735,75,Male,169,163.4,116,95,Hypertension
+736,86,Female,149,13.3,127,91,Healthy
+737,16,Male,162,50.6,145,102,Nephrology
+738,59,Female,169,78.7,135,98,Healthy
+739,74,Male,157,21.5,125,100,Healthy
+740,34,Female,160,22.0,119,91,Hypertension
+741,22,Male,178,28.6,110,97,Heart Disease
+742,80,Female,176,60.5,126,105,Heart Disease
+743,58,Male,169,87.2,142,74,Stroke
+744,15,Female,169,137.4,122,97,Stroke
+745,15,Male,171,158.3,120,84,Nephrology
+746,102,Male,153,32.4,120,80,Cancer
+747,85,Male,154,42.8,136,92,Nephrology
+748,63,Female,166,165.2,153,73,Diabetes
+749,52,Female,163,112.2,148,95,Hypertension
+750,62,Female,172,88.1,110,100,Stroke
+751,18,Female,150,156.2,130,103,Stroke
+752,96,Male,153,39.4,130,75,Healthy
+753,31,Male,162,131.3,149,92,Diabetes
+754,37,Female,146,128.6,146,82,Diabetes
+755,19,Male,151,143.1,116,91,Heart Disease
+756,6,Male,160,137.7,125,95,Diabetes
+757,24,Female,150,76.6,111,82,Diabetes
+758,75,Female,173,24.0,140,80,Stroke
+759,13,Female,174,28.7,125,92,Diabetes
+760,33,Male,167,14.5,136,87,Nephrology
+761,49,Female,159,69.7,145,100,Diabetes
+762,12,Male,150,144.7,120,102,Heart Disease
+763,83,Male,173,5.8,131,78,Nephrology
+764,98,Male,160,162.8,145,105,Diabetes
+765,37,Female,164,130.8,133,82,Diabetes
+766,61,Male,156,33.5,158,98,Cancer
+767,47,Female,149,137.7,112,93,Cancer
+768,107,Female,173,8.5,153,96,Nephrology
+769,21,Female,158,64.7,110,79,Stroke
+770,32,Male,149,50.6,150,89,Stroke
+771,87,Male,162,104.1,142,93,Healthy
+772,16,Male,162,144.4,118,71,Cancer
+773,21,Male,165,135.3,113,95,Stroke
+774,32,Female,147,115.5,141,71,Cancer
+775,28,Male,147,78.6,156,98,Heart Disease
+776,31,Male,166,114.7,133,95,Diabetes
+777,111,Male,178,72.7,156,80,Diabetes
+778,3,Male,145,28.6,140,104,Nephrology
+779,45,Male,175,165.2,151,93,Healthy
+780,101,Female,171,120.8,136,71,Nephrology
+781,87,Male,158,113.4,138,105,Healthy
+782,77,Female,147,110.1,123,101,Diabetes
+783,92,Male,166,144.4,121,91,Hypertension
+784,24,Female,158,5.2,129,72,Healthy
+785,87,Female,151,162.9,130,74,Hypertension
+786,45,Female,163,8.8,159,84,Cancer
+787,61,Male,156,50.4,112,91,Healthy
+788,78,Male,161,16.8,112,78,Nephrology
+789,1,Female,164,162.8,133,73,Cancer
+790,32,Male,159,89.4,154,96,Stroke
+791,51,Female,154,69.3,154,103,Diabetes
+792,80,Male,175,25.4,111,88,Cancer
+793,87,Male,175,5.8,133,70,Nephrology
+794,110,Female,168,109.6,112,94,Hypertension
+795,19,Female,155,41.5,132,100,Stroke
+796,52,Male,149,134.5,144,90,Hypertension
+797,85,Female,176,7.8,122,97,Heart Disease
+798,7,Male,172,160.2,147,77,Stroke
+799,97,Male,176,43.6,124,98,Nephrology
+800,9,Female,153,144.4,137,104,Hypertension
+801,26,Male,146,14.2,130,74,Hypertension
+802,25,Male,167,100.8,145,74,Heart Disease
+803,55,Male,170,144.9,138,72,Heart Disease
+804,92,Female,156,136.8,160,91,Heart Disease
+805,83,Female,177,108.2,127,93,Diabetes
+806,65,Male,160,139.4,140,104,Stroke
+807,14,Female,156,73.1,147,96,Cancer
+808,114,Female,167,143.3,128,71,Healthy
+809,42,Female,153,101.0,140,71,Diabetes
+810,89,Male,162,36.0,152,105,Nephrology
+811,51,Female,154,44.0,110,80,Cancer
+812,103,Female,153,139.1,140,81,Nephrology
+813,8,Male,158,90.6,112,75,Heart Disease
+814,22,Male,148,40.8,129,94,Nephrology
+815,61,Female,150,151.7,155,75,Healthy
+816,115,Male,157,9.4,119,89,Healthy
+817,41,Female,159,53.0,128,77,Nephrology
+818,28,Female,146,88.1,153,100,Nephrology
+819,14,Female,159,105.2,158,101,Stroke
+820,112,Male,161,45.0,110,82,Cancer
+821,105,Female,171,107.8,141,101,Hypertension
+822,84,Male,159,95.9,119,77,Healthy
+823,30,Male,159,124.8,150,84,Heart Disease
+824,94,Male,158,152.0,151,99,Healthy
+825,63,Male,148,17.0,142,99,Diabetes
+826,18,Female,177,136.5,128,76,Healthy
+827,37,Male,156,84.4,160,77,Diabetes
+828,72,Female,178,86.1,155,98,Stroke
+829,101,Male,175,89.0,129,83,Hypertension
+830,110,Female,168,7.6,136,78,Diabetes
+831,7,Male,159,26.1,154,81,Healthy
+832,12,Male,176,36.6,145,83,Nephrology
+833,105,Female,163,72.9,150,95,Healthy
+834,58,Male,167,44.1,148,103,Healthy
+835,114,Male,169,28.3,129,78,Diabetes
+836,101,Male,147,116.1,118,73,Cancer
+837,63,Female,168,151.2,125,84,Heart Disease
+838,53,Female,146,91.0,116,97,Cancer
+839,22,Female,152,38.9,153,103,Hypertension
+840,61,Male,151,150.4,110,84,Stroke
+841,66,Female,163,52.7,136,87,Cancer
+842,21,Male,146,15.9,152,89,Heart Disease
+843,29,Male,165,134.5,139,102,Stroke
+844,95,Female,173,50.0,129,70,Heart Disease
+845,14,Male,148,3.1,121,96,Diabetes
+846,42,Female,164,102.7,157,84,Cancer
+847,92,Female,156,48.4,125,100,Stroke
+848,92,Male,151,115.5,135,79,Stroke
+849,27,Male,151,155.7,124,78,Stroke
+850,52,Male,170,140.7,123,102,Nephrology
+851,100,Male,152,133.8,116,81,Diabetes
+852,94,Female,165,163.9,118,72,Stroke
+853,77,Female,168,3.3,116,84,Cancer
+854,100,Male,169,106.4,112,84,Cancer
+855,39,Male,146,157.1,137,80,Heart Disease
+856,62,Female,145,56.4,138,89,Cancer
+857,11,Male,171,96.8,131,104,Nephrology
+858,6,Female,172,55.2,111,105,Heart Disease
+859,24,Female,151,24.3,136,95,Hypertension
+860,113,Female,174,162.5,139,76,Cancer
+861,54,Female,169,126.6,128,95,Heart Disease
+862,67,Female,159,128.7,142,89,Stroke
+863,86,Female,172,78.9,140,103,Healthy
+864,25,Female,156,137.8,115,81,Stroke
+865,103,Female,150,23.8,134,87,Hypertension
+866,2,Female,178,37.3,155,71,Diabetes
+867,3,Male,156,109.4,127,86,Nephrology
+868,16,Male,158,120.2,121,93,Heart Disease
+869,102,Male,158,22.0,160,84,Diabetes
+870,72,Male,162,12.2,132,96,Diabetes
+871,113,Female,158,34.6,127,92,Diabetes
+872,105,Female,172,32.6,114,93,Nephrology
+873,115,Male,165,19.3,126,99,Diabetes
+874,27,Female,154,17.5,157,85,Hypertension
+875,34,Female,167,46.7,119,95,Diabetes
+876,3,Female,160,110.1,122,105,Cancer
+877,114,Male,149,132.9,145,76,Diabetes
+878,28,Female,157,125.5,118,79,Cancer
+879,34,Female,164,2.3,158,71,Healthy
+880,53,Male,147,87.2,127,80,Healthy
+881,12,Male,176,41.7,128,90,Healthy
+882,50,Female,165,88.1,116,90,Healthy
+883,98,Male,175,87.5,132,96,Nephrology
+884,89,Female,151,52.7,145,96,Nephrology
+885,8,Male,167,72.8,133,70,Healthy
+886,55,Female,154,124.2,135,78,Stroke
+887,66,Male,155,123.2,112,102,Heart Disease
+888,41,Female,173,43.3,110,92,Healthy
+889,55,Female,162,75.0,114,105,Cancer
+890,29,Male,148,36.3,142,74,Heart Disease
+891,68,Male,173,64.2,155,87,Diabetes
+892,19,Female,146,155.6,149,95,Cancer
+893,44,Female,174,134.9,159,102,Cancer
+894,114,Male,165,18.9,123,92,Nephrology
+895,62,Male,151,39.2,150,104,Nephrology
+896,53,Female,170,163.8,116,105,Nephrology
+897,75,Female,149,143.4,114,73,Stroke
+898,85,Female,160,11.1,110,73,Healthy
+899,83,Female,151,27.0,159,99,Healthy
+900,9,Male,166,160.6,141,102,Stroke
+901,19,Female,177,94.8,143,80,Heart Disease
+902,100,Female,153,10.5,112,83,Healthy
+903,55,Male,178,74.5,143,72,Heart Disease
+904,107,Female,173,162.8,149,94,Heart Disease
+905,50,Male,146,75.1,123,73,Healthy
+906,32,Female,145,59.6,111,75,Nephrology
+907,67,Male,153,85.2,133,98,Nephrology
+908,72,Female,166,36.5,141,101,Nephrology
+909,6,Female,154,30.3,115,96,Healthy
+910,56,Female,155,31.7,121,84,Heart Disease
+911,93,Male,173,12.7,129,94,Hypertension
+912,34,Female,178,45.7,150,95,Nephrology
+913,61,Female,145,153.9,142,91,Heart Disease
+914,21,Male,147,89.3,116,76,Stroke
+915,5,Male,151,69.4,116,84,Stroke
+916,89,Female,153,96.2,126,94,Heart Disease
+917,109,Female,167,2.8,119,77,Heart Disease
+918,80,Female,148,133.6,112,91,Cancer
+919,101,Male,164,154.2,138,80,Diabetes
+920,59,Female,172,90.5,121,96,Stroke
+921,66,Male,163,41.0,135,78,Diabetes
+922,72,Male,154,137.9,143,78,Diabetes
+923,82,Female,155,161.1,147,96,Healthy
+924,101,Female,168,66.3,114,99,Cancer
+925,57,Male,175,147.7,119,93,Hypertension
+926,39,Male,160,120.4,135,95,Healthy
+927,86,Female,149,50.1,124,95,Diabetes
+928,63,Male,151,125.4,134,70,Healthy
+929,53,Male,173,139.4,128,75,Cancer
+930,113,Male,149,55.7,143,98,Cancer
+931,67,Female,173,82.4,158,92,Hypertension
+932,82,Male,158,87.1,137,72,Cancer
+933,13,Female,159,131.7,159,91,Healthy
+934,105,Female,150,86.2,146,92,Healthy
+935,58,Female,154,54.0,151,72,Healthy
+936,41,Male,168,34.7,113,93,Cancer
+937,17,Female,171,56.2,155,73,Hypertension
+938,10,Female,152,60.0,119,88,Stroke
+939,31,Male,154,49.3,142,87,Stroke
+940,13,Male,147,2.0,127,91,Heart Disease
+941,17,Female,149,103.1,150,92,Heart Disease
+942,17,Female,171,104.4,147,95,Nephrology
+943,63,Female,148,28.9,114,93,Healthy
+944,76,Male,150,133.8,114,76,Hypertension
+945,79,Female,145,5.4,118,88,Cancer
+946,101,Female,158,107.9,112,86,Diabetes
+947,24,Male,166,144.1,118,89,Healthy
+948,79,Female,176,85.5,139,75,Diabetes
+949,50,Female,167,69.5,141,96,Heart Disease
+950,36,Male,158,80.2,114,71,Nephrology
+951,102,Male,176,118.8,160,93,Diabetes
+952,4,Male,174,22.3,148,98,Diabetes
+953,38,Male,177,103.9,127,73,Heart Disease
+954,28,Male,151,19.1,146,98,Healthy
+955,105,Male,149,45.9,120,73,Heart Disease
+956,28,Female,162,62.7,126,90,Healthy
+957,50,Female,164,59.4,133,100,Healthy
+958,81,Female,174,134.8,157,89,Nephrology
+959,113,Female,146,85.4,135,90,Heart Disease
+960,97,Female,148,48.2,110,73,Heart Disease
+961,19,Male,169,13.5,152,93,Diabetes
+962,115,Female,167,132.9,160,74,Healthy
+963,85,Female,157,34.0,129,83,Heart Disease
+964,60,Male,175,57.1,128,104,Nephrology
+965,82,Female,171,92.8,142,89,Stroke
+966,110,Male,164,146.0,147,105,Cancer
+967,7,Female,167,59.7,113,88,Stroke
+968,50,Female,156,87.3,125,104,Heart Disease
+969,41,Male,153,54.2,145,76,Heart Disease
+970,44,Female,160,48.9,111,100,Diabetes
+971,11,Female,178,101.5,152,91,Cancer
+972,95,Male,178,93.6,151,84,Nephrology
+973,64,Female,177,25.5,142,99,Stroke
+974,94,Female,175,82.0,144,80,Heart Disease
+975,44,Male,158,137.1,144,92,Stroke
+976,66,Male,148,67.0,145,80,Stroke
+977,102,Male,155,152.9,128,93,Heart Disease
+978,10,Male,171,21.0,142,78,Heart Disease
+979,60,Female,145,46.8,145,104,Diabetes
+980,56,Male,152,113.1,134,90,Hypertension
+981,105,Male,152,110.9,137,98,Hypertension
+982,35,Female,172,123.6,127,101,Nephrology
+983,102,Male,170,74.2,142,92,Stroke
+984,50,Male,162,82.9,155,95,Cancer
+985,101,Male,158,124.4,151,93,Stroke
+986,12,Male,154,142.3,118,91,Nephrology
+987,92,Male,171,151.0,138,75,Diabetes
+988,68,Male,176,87.2,155,89,Hypertension
+989,63,Female,173,35.6,113,91,Stroke
+990,33,Male,170,74.9,146,75,Nephrology
+991,92,Female,159,33.0,140,94,Stroke
+992,103,Male,172,71.4,112,97,Diabetes
+993,48,Female,170,20.8,119,101,Stroke
+994,92,Male,155,31.5,110,88,Hypertension
+995,25,Male,172,32.1,150,105,Diabetes
+996,49,Male,152,100.7,130,96,Hypertension
+997,24,Female,159,36.2,157,91,Healthy
+998,83,Female,151,61.1,120,96,Healthy
+999,41,Female,146,162.3,155,75,Hypertension
+1000,8,Male,164,22.8,154,97,Heart Disease
