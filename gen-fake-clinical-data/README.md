@@ -198,15 +198,3 @@ TV_VISITS = [
     # Add or modify visits here
 ]
 ```
-
-## License
-
-[Add your license here]
-
-## Contributing
-
-[Add contribution guidelines here]
-
-## Contact
-
-[Add contact information here]
