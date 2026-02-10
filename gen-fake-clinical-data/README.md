@@ -136,6 +136,57 @@ print(cm.head())
 print(f"Total CM records: {len(cm)}")
 ```
 
+## Loading Data into DuckDB
+
+For easier querying and analysis, you can load all the data into a DuckDB database:
+
+```bash
+# Load all domains into DuckDB
+python load_to_duckdb.py
+```
+
+This creates a `clinical_data.duckdb` file (~7.5 MB) with all six domains as tables.
+
+### Query the Database
+
+**From Python:**
+```python
+import duckdb
+
+con = duckdb.connect('clinical_data.duckdb', read_only=True)
+
+# Simple query
+df = con.execute("SELECT * FROM DM LIMIT 10").df()
+print(df)
+
+# Cross-domain analysis
+query = '''
+    SELECT 
+        dm.ARM,
+        COUNT(DISTINCT dm.USUBJID) as subjects,
+        COUNT(ae.AESEQ) as total_aes,
+        ROUND(COUNT(ae.AESEQ) * 1.0 / COUNT(DISTINCT dm.USUBJID), 2) as aes_per_subject
+    FROM DM dm
+    LEFT JOIN AE ae ON dm.USUBJID = ae.USUBJID
+    GROUP BY dm.ARM
+'''
+result = con.execute(query).df()
+print(result)
+
+con.close()
+```
+
+**From Command Line:**
+```bash
+# Run a query
+duckdb clinical_data.duckdb "SELECT ARM, COUNT(*) FROM DM GROUP BY ARM"
+
+# Interactive mode
+duckdb clinical_data.duckdb
+```
+
+**See [DUCKDB_GUIDE.md](DUCKDB_GUIDE.md) for comprehensive query examples and usage tips.**
+
 ## Domain Details
 
 ### CM (Concomitant Medications)
@@ -198,3 +249,15 @@ TV_VISITS = [
     # Add or modify visits here
 ]
 ```
+
+## License
+
+[Add your license here]
+
+## Contributing
+
+[Add contribution guidelines here]
+
+## Contact
+
+[Add contact information here]
