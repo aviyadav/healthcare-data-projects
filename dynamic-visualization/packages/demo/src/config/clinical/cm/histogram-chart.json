@@ -1,0 +1,10 @@
+{
+  "id": "cm-histogram-chart",
+  "type": "histogram",
+  "title": "Medications by Route of Administration",
+  "xAxis": { "field": "CMROUTE", "title": "Route", "axisType": "category" },
+  "colorBy": "CMCAT",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

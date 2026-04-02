@@ -1,0 +1,10 @@
+{
+  "id": "dm-box-chart",
+  "type": "box",
+  "title": "Age Distribution by Treatment Arm",
+  "xAxis": { "field": "ARM", "title": "Treatment Arm" },
+  "yAxis": { "field": "AGE", "title": "Age (years)" },
+  "colorBy": "ARM",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

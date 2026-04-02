@@ -1,0 +1,12 @@
+{
+  "id": "file-bar-chart",
+  "type": "bar",
+  "title": "Total Sales by Region",
+  "xAxis": { "field": "region", "title": "Region", "axisType": "category" },
+  "yAxis": { "field": "sales", "title": "Total Sales ($)" },
+  "aggregation": "sum",
+  "groupBy": "region",
+  "colorBy": "region",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

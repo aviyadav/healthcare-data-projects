@@ -1,0 +1,10 @@
+{
+  "id": "dm-scatter-chart",
+  "type": "scatter",
+  "title": "Subject Age by Country",
+  "xAxis": { "field": "COUNTRY", "title": "Country", "axisType": "category" },
+  "yAxis": { "field": "AGE", "title": "Age (years)" },
+  "marker": { "colorField": "SEX", "size": 8, "opacity": 0.6 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

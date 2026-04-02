@@ -1,0 +1,10 @@
+{
+  "id": "dm-sankey-chart",
+  "type": "sankey",
+  "title": "DM Flow: Race → Treatment Arm",
+  "xAxis": { "field": "RACE", "title": "Race" },
+  "sankeyTarget": "ARM",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

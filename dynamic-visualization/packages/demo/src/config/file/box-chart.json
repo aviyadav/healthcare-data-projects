@@ -1,0 +1,10 @@
+{
+  "id": "file-box-chart",
+  "type": "box",
+  "title": "Sales Distribution by Region",
+  "xAxis": { "field": "region", "title": "Region" },
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "colorBy": "region",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

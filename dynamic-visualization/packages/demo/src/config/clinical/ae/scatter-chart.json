@@ -1,0 +1,10 @@
+{
+  "id": "ae-scatter-chart",
+  "type": "scatter",
+  "title": "AE Relatedness vs Outcome",
+  "xAxis": { "field": "AEREL", "title": "Drug Relatedness", "axisType": "category" },
+  "yAxis": { "field": "AEOUT", "title": "Outcome" },
+  "marker": { "colorField": "AESEV", "size": 8, "opacity": 0.65 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

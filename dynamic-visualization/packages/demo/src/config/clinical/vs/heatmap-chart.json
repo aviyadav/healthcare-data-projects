@@ -1,0 +1,10 @@
+{
+  "id": "vs-heatmap-chart",
+  "type": "heatmap",
+  "title": "VS Count: Test × Visit",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test" },
+  "yAxis": { "field": "VISIT", "title": "Visit" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "Greens" },
+  "enableSelection": false
+}

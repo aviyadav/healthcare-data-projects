@@ -1,0 +1,12 @@
+{
+  "id": "tv-line-chart",
+  "type": "line",
+  "title": "Enrollment Window by Visit",
+  "xAxis": { "field": "VISIT", "title": "Visit Name", "axisType": "category" },
+  "yAxis": { "field": "TVENRL", "title": "Enrollment Window" },
+  "aggregation": "mean",
+  "groupBy": "VISIT",
+  "colorBy": "ARMCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

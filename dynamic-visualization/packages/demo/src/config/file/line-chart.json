@@ -1,0 +1,10 @@
+{
+  "id": "file-line-chart",
+  "type": "line",
+  "title": "Monthly Sales by Region",
+  "xAxis": { "field": "date", "title": "Month", "axisType": "category" },
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "colorBy": "region",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "vs-box-chart",
+  "type": "box",
+  "title": "Vital Sign Result Distribution by Test",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test" },
+  "yAxis": { "field": "VSORRES", "title": "Observed Result" },
+  "colorBy": "VSTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tv-heatmap-chart",
+  "type": "heatmap",
+  "title": "TV Count: Visit × Arm",
+  "xAxis": { "field": "VISIT", "title": "Visit" },
+  "yAxis": { "field": "ARMCD", "title": "Arm Code" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "YlOrRd" },
+  "enableSelection": false
+}

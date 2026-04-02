@@ -1,0 +1,10 @@
+{
+  "id": "ae-pie-chart",
+  "type": "pie",
+  "title": "AEs by Drug Relatedness",
+  "xAxis": { "field": "AEREL", "title": "Drug Relatedness" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "AEREL",
+  "enableSelection": false
+}

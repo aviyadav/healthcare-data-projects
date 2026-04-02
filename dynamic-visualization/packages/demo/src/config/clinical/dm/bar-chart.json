@@ -1,0 +1,12 @@
+{
+  "id": "dm-bar-chart",
+  "type": "bar",
+  "title": "Subjects by Treatment Arm",
+  "xAxis": { "field": "ARM", "title": "Treatment Arm", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "ARM",
+  "colorBy": "ARM",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

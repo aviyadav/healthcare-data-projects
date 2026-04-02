@@ -1,0 +1,10 @@
+{
+  "id": "lb-sankey-chart",
+  "type": "sankey",
+  "title": "LB Flow: Test Code → Visit",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code" },
+  "sankeyTarget": "VISIT",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

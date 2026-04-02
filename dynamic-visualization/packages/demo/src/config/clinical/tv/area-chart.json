@@ -1,0 +1,12 @@
+{
+  "id": "tv-area-chart",
+  "type": "area",
+  "title": "Visit Count by Arm Code (Stacked)",
+  "xAxis": { "field": "ARMCD", "title": "Arm Code", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "ARMCD",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "file-heatmap-chart",
+  "type": "heatmap",
+  "title": "Sales Intensity: Region × Category",
+  "xAxis": { "field": "region", "title": "Region" },
+  "yAxis": { "field": "category", "title": "Category" },
+  "zAxis": { "field": "sales", "title": "Sales ($)" },
+  "marker": { "colorScale": "YlOrRd" },
+  "enableSelection": false
+}

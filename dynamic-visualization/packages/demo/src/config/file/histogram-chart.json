@@ -1,0 +1,10 @@
+{
+  "id": "file-histogram-chart",
+  "type": "histogram",
+  "title": "Volume Distribution by Category",
+  "xAxis": { "field": "volume", "title": "Volume" },
+  "colorBy": "category",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "tv-box-chart",
+  "type": "box",
+  "title": "Visit Number Distribution by Arm",
+  "xAxis": { "field": "ARMCD", "title": "Arm Code" },
+  "yAxis": { "field": "VISITNUM", "title": "Visit Number" },
+  "colorBy": "ARMCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

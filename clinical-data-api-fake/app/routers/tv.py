@@ -26,5 +26,5 @@ _TABLE = "TV"
 async def get_trial_visits(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[TVRecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[TVRecord](data=records, meta=meta)

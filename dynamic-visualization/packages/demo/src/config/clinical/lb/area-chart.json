@@ -1,0 +1,12 @@
+{
+  "id": "lb-area-chart",
+  "type": "area",
+  "title": "Lab Tests by Test Code (Stacked)",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "LBTESTCD",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

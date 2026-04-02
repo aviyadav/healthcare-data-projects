@@ -1,0 +1,12 @@
+{
+  "id": "cm-area-chart",
+  "type": "area",
+  "title": "Medication Count by Category",
+  "xAxis": { "field": "CMCAT", "title": "Category", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "CMCAT",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

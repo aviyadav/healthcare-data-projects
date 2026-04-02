@@ -1,0 +1,10 @@
+{
+  "id": "tv-pie-chart",
+  "type": "pie",
+  "title": "Trial Visits by Visit Name",
+  "xAxis": { "field": "VISIT", "title": "Visit" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "VISIT",
+  "enableSelection": false
+}

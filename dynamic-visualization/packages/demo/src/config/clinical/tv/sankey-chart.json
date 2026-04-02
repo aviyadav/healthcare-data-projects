@@ -1,0 +1,10 @@
+{
+  "id": "tv-sankey-chart",
+  "type": "sankey",
+  "title": "TV Flow: Arm Code → Visit",
+  "xAxis": { "field": "ARMCD", "title": "Arm Code" },
+  "sankeyTarget": "VISIT",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

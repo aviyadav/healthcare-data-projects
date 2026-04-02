@@ -1,0 +1,7 @@
+[install]
+# Respect workspace:* protocol links between packages
+exact = false
+
+[test]
+# bun test automatically discovers **/*.test.{ts,tsx} files
+# No extra config needed — test files live in src/__tests__/

@@ -1,0 +1,10 @@
+{
+  "id": "lb-histogram-chart",
+  "type": "histogram",
+  "title": "Lab Tests by Visit",
+  "xAxis": { "field": "VISIT", "title": "Visit", "axisType": "category" },
+  "colorBy": "LBTESTCD",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

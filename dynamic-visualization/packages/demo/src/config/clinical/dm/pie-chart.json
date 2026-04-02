@@ -1,0 +1,10 @@
+{
+  "id": "dm-pie-chart",
+  "type": "pie",
+  "title": "Subject Distribution by Race",
+  "xAxis": { "field": "RACE", "title": "Race" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "RACE",
+  "enableSelection": false
+}

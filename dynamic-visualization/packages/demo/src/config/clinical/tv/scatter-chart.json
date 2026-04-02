@@ -1,0 +1,10 @@
+{
+  "id": "tv-scatter-chart",
+  "type": "scatter",
+  "title": "Start vs Enrollment Window by Arm",
+  "xAxis": { "field": "TVSTRL", "title": "Start Window" },
+  "yAxis": { "field": "TVENRL", "title": "Enrollment Window" },
+  "marker": { "colorField": "ARMCD", "size": 9, "opacity": 0.65 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

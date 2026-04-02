@@ -1,0 +1,10 @@
+{
+  "id": "file-sankey-chart",
+  "type": "sankey",
+  "title": "Sales Flow: Region → Category",
+  "xAxis": { "field": "region", "title": "Region" },
+  "sankeyTarget": "category",
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

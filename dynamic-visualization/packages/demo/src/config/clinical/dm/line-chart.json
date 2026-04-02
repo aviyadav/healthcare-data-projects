@@ -1,0 +1,10 @@
+{
+  "id": "dm-line-chart",
+  "type": "line",
+  "title": "Subject Enrollment Over Time by Arm",
+  "xAxis": { "field": "DMDTC", "title": "Enrollment Date", "axisType": "date" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "colorBy": "ARM",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

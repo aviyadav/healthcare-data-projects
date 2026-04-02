@@ -1,0 +1,10 @@
+{
+  "id": "lb-heatmap-chart",
+  "type": "heatmap",
+  "title": "LB Count: Test Code × Visit",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code" },
+  "yAxis": { "field": "VISIT", "title": "Visit" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "Greens" },
+  "enableSelection": false
+}

@@ -1,0 +1,12 @@
+{
+  "id": "vs-area-chart",
+  "type": "area",
+  "title": "Vital Signs Count by Test (Stacked)",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "VSTESTCD",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

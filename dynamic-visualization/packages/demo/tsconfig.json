@@ -1,0 +1,10 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "paths": {
+      "chart-lib": ["../chart-lib/src/index.ts"],
+    },
+  },
+  "include": ["src"],
+}

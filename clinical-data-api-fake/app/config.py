@@ -2,9 +2,9 @@
 Application configuration using pydantic-settings.
 Environment variables override defaults.
 """
-from pathlib import Path
+
 from functools import lru_cache
-import multiprocessing
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -20,15 +20,15 @@ class Settings(BaseSettings):
     db_path: str = str(Path(__file__).parent.parent / "clinical_data.duckdb")
 
     # Pagination
-    default_page_size: int = 100
-    max_page_size: int = 1000
+    default_page_size: int = 1000
+    max_page_size: int = 3000
 
     # Server
     host: str = "0.0.0.0"
     port: int = 8000
 
-    # Gunicorn workers — sensible default; override via env var
-    workers: int = multiprocessing.cpu_count() * 2 + 1
+    # Single worker by default — DuckDB file locking makes multiple workers unsafe
+    workers: int = 1
 
     # App metadata
     app_title: str = "Clinical Data API"
@@ -40,7 +40,7 @@ class Settings(BaseSettings):
     app_version: str = "1.0.0"
 
 
-@lru_cache()
+@lru_cache
 def get_settings() -> Settings:
     """Return cached settings instance (created once per process)."""
     return Settings()

@@ -26,5 +26,5 @@ _TABLE = "VS"
 async def get_vital_signs(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[VSRecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[VSRecord](data=records, meta=meta)

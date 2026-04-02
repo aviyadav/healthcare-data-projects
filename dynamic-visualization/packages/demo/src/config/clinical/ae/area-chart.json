@@ -1,0 +1,12 @@
+{
+  "id": "ae-area-chart",
+  "type": "area",
+  "title": "AEs by Incident Group",
+  "xAxis": { "field": "AE_INCIDENT_GROUP", "title": "Incident Group", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "AE_INCIDENT_GROUP",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

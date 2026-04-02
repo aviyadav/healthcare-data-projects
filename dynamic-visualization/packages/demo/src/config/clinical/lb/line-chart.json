@@ -1,0 +1,10 @@
+{
+  "id": "lb-line-chart",
+  "type": "line",
+  "title": "Lab Tests Over Time by Test Code",
+  "xAxis": { "field": "LBDTC", "title": "Collection Date", "axisType": "date" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "colorBy": "LBTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

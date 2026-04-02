@@ -18,7 +18,10 @@ Design decisions
   only the requested page is transferred over the Python boundary.
 - COUNT(*) is run as a separate lightweight query so we can return total_records
   without fetching all data.
+- Blocking DuckDB I/O is offloaded to a thread-pool via asyncio.to_thread so the
+  async event loop is never stalled while the database is working.
 """
+import asyncio
 import logging
 import math
 from typing import Any, Dict, List, Optional, Tuple
@@ -80,7 +83,7 @@ def build_filter_clause(
 # ---------------------------------------------------------------------------
 
 
-def fetch_domain_data(
+async def fetch_domain_data(
     table: str,
     study: Optional[str] = None,
     site: Optional[str] = None,
@@ -125,26 +128,33 @@ def fetch_domain_data(
         f"LIMIT ? OFFSET ?"
     )
 
-    with get_db() as conn:
-        # -- Count query (fast, full-table stats)
-        try:
-            total_records: int = conn.execute(count_sql, params).fetchone()[0]  # type: ignore[index]
-        except Exception as exc:
-            logger.error("Count query failed for table %s: %s", table, exc)
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"Database error fetching count from {table}.",
-            ) from exc
+    def _execute_queries() -> Tuple[int, Any]:
+        """Run both DB queries synchronously inside a worker thread."""
+        with get_db() as conn:
+            # -- Count query (fast, full-table stats)
+            try:
+                total: int = conn.execute(count_sql, params).fetchone()[0]  # type: ignore[index]
+            except Exception as exc:
+                logger.error("Count query failed for table %s: %s", table, exc)
+                raise HTTPException(
+                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    detail=f"Database error fetching count from {table}.",
+                ) from exc
 
-        # -- Data query via Arrow → Polars (zero-copy columnar path)
-        try:
-            arrow_table = conn.execute(data_sql, params + [page_size, offset]).to_arrow_table()
-        except Exception as exc:
-            logger.error("Data query failed for table %s: %s", table, exc)
-            raise HTTPException(
-                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"Database error fetching data from {table}.",
-            ) from exc
+            # -- Data query via Arrow → Polars (zero-copy columnar path)
+            try:
+                arrow = conn.execute(data_sql, params + [page_size, offset]).to_arrow_table()
+            except Exception as exc:
+                logger.error("Data query failed for table %s: %s", table, exc)
+                raise HTTPException(
+                    status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                    detail=f"Database error fetching data from {table}.",
+                ) from exc
+
+            return total, arrow
+
+    # Offload blocking DB I/O to a thread so the event loop stays free
+    total_records, arrow_table = await asyncio.to_thread(_execute_queries)
 
     # Convert Arrow → Polars (zero-copy)
     if arrow_table.num_rows == 0:

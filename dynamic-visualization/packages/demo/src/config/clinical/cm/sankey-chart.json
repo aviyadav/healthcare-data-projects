@@ -1,0 +1,10 @@
+{
+  "id": "cm-sankey-chart",
+  "type": "sankey",
+  "title": "CM Flow: Category → Route",
+  "xAxis": { "field": "CMCAT", "title": "Category" },
+  "sankeyTarget": "CMROUTE",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

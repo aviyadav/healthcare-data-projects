@@ -1,0 +1,10 @@
+{
+  "id": "ae-box-chart",
+  "type": "box",
+  "title": "AE Sequence by Body System",
+  "xAxis": { "field": "AEBODSYS", "title": "Body System" },
+  "yAxis": { "field": "AESEQ", "title": "AE Sequence Number" },
+  "colorBy": "AEBODSYS",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

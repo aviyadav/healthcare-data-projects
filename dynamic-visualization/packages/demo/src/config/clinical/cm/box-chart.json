@@ -1,0 +1,10 @@
+{
+  "id": "cm-box-chart",
+  "type": "box",
+  "title": "Dose Distribution by Medication Category",
+  "xAxis": { "field": "CMCAT", "title": "Medication Category" },
+  "yAxis": { "field": "CMDOSE", "title": "Dose" },
+  "colorBy": "CMCAT",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

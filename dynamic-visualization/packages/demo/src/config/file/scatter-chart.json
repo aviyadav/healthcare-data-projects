@@ -1,0 +1,10 @@
+{
+  "id": "file-scatter-chart",
+  "type": "scatter",
+  "title": "Volume vs Sales by Category",
+  "xAxis": { "field": "volume", "title": "Volume (units)" },
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "marker": { "colorField": "category", "size": 10, "opacity": 0.7 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

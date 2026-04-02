@@ -1,0 +1,12 @@
+{
+  "id": "cm-bar-chart",
+  "type": "bar",
+  "title": "Medications by Category",
+  "xAxis": { "field": "CMCAT", "title": "Medication Category", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "CMCAT",
+  "colorBy": "CMCAT",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

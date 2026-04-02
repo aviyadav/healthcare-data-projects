@@ -1,0 +1,10 @@
+{
+  "id": "ae-sankey-chart",
+  "type": "sankey",
+  "title": "AE Flow: Severity → Outcome",
+  "xAxis": { "field": "AESEV", "title": "Severity" },
+  "sankeyTarget": "AEOUT",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

@@ -1,0 +1,10 @@
+{
+  "id": "cm-scatter-chart",
+  "type": "scatter",
+  "title": "Dose vs Dosage Form by Category",
+  "xAxis": { "field": "CMDOSFRM", "title": "Dosage Form", "axisType": "category" },
+  "yAxis": { "field": "CMDOSE", "title": "Dose" },
+  "marker": { "colorField": "CMCAT", "size": 8, "opacity": 0.65 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

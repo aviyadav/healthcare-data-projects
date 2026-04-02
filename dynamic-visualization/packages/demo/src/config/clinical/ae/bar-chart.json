@@ -1,0 +1,12 @@
+{
+  "id": "ae-bar-chart",
+  "type": "bar",
+  "title": "Adverse Events by Severity",
+  "xAxis": { "field": "AESEV", "title": "Severity", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "AESEV",
+  "colorBy": "AESEV",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

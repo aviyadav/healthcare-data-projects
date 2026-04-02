@@ -1,0 +1,10 @@
+{
+  "id": "ae-line-chart",
+  "type": "line",
+  "title": "AEs Over Time by Body System",
+  "xAxis": { "field": "AESTDTC", "title": "AE Start Date", "axisType": "date" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "colorBy": "AEBODSYS",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

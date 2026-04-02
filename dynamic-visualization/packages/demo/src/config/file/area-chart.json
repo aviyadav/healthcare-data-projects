@@ -1,0 +1,11 @@
+{
+  "id": "file-area-chart",
+  "type": "area",
+  "title": "Monthly Sales by Category (Stacked)",
+  "xAxis": { "field": "date", "title": "Month", "axisType": "category" },
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "colorBy": "category",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

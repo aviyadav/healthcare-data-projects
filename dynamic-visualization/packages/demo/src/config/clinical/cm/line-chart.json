@@ -1,0 +1,10 @@
+{
+  "id": "cm-line-chart",
+  "type": "line",
+  "title": "Medication Start Dates by Category",
+  "xAxis": { "field": "CMSTDTC", "title": "Start Date", "axisType": "date" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "colorBy": "CMCAT",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "vs-line-chart",
+  "type": "line",
+  "title": "Vital Signs Over Time by Test",
+  "xAxis": { "field": "VSDTC", "title": "Collection Date", "axisType": "date" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "colorBy": "VSTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

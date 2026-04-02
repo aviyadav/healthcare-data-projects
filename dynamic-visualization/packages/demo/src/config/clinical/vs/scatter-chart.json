@@ -1,0 +1,10 @@
+{
+  "id": "vs-scatter-chart",
+  "type": "scatter",
+  "title": "Vital Sign Result by Visit",
+  "xAxis": { "field": "VISIT", "title": "Visit", "axisType": "category" },
+  "yAxis": { "field": "VSORRES", "title": "Observed Result" },
+  "marker": { "colorField": "VSTESTCD", "size": 7, "opacity": 0.6 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

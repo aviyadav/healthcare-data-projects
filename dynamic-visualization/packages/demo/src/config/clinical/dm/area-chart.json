@@ -1,0 +1,12 @@
+{
+  "id": "dm-area-chart",
+  "type": "area",
+  "title": "Subjects by Treatment Arm (Stacked)",
+  "xAxis": { "field": "ARM", "title": "Treatment Arm", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "ARM",
+  "stackGroup": "one",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

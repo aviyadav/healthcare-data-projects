@@ -26,5 +26,5 @@ _TABLE = "DM"
 async def get_demographics(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[DMRecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[DMRecord](data=records, meta=meta)

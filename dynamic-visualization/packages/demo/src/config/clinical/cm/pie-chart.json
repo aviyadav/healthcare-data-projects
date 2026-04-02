@@ -1,0 +1,10 @@
+{
+  "id": "cm-pie-chart",
+  "type": "pie",
+  "title": "Medications by Route of Administration",
+  "xAxis": { "field": "CMROUTE", "title": "Route" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "CMROUTE",
+  "enableSelection": false
+}

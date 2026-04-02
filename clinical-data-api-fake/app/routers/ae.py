@@ -26,5 +26,5 @@ _TABLE = "AE"
 async def get_adverse_events(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[AERecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[AERecord](data=records, meta=meta)

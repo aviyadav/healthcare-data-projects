@@ -1,0 +1,10 @@
+{
+  "id": "dm-heatmap-chart",
+  "type": "heatmap",
+  "title": "Subject Count: Race × Sex",
+  "xAxis": { "field": "RACE", "title": "Race" },
+  "yAxis": { "field": "SEX", "title": "Sex" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "Blues" },
+  "enableSelection": false
+}

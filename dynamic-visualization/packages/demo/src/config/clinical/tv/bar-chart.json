@@ -1,0 +1,12 @@
+{
+  "id": "tv-bar-chart",
+  "type": "bar",
+  "title": "Visits by Arm Code",
+  "xAxis": { "field": "ARMCD", "title": "Arm Code", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "ARMCD",
+  "colorBy": "ARMCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

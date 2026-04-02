@@ -1,0 +1,10 @@
+{
+  "id": "dm-histogram-chart",
+  "type": "histogram",
+  "title": "Subjects by Sex",
+  "xAxis": { "field": "SEX", "title": "Sex", "axisType": "category" },
+  "colorBy": "ARM",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

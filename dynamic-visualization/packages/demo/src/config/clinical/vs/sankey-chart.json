@@ -1,0 +1,10 @@
+{
+  "id": "vs-sankey-chart",
+  "type": "sankey",
+  "title": "VS Flow: Test → Visit",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test" },
+  "sankeyTarget": "VISIT",
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "sum",
+  "enableSelection": false
+}

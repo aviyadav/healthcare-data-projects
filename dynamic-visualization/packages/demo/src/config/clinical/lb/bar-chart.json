@@ -1,0 +1,12 @@
+{
+  "id": "lb-bar-chart",
+  "type": "bar",
+  "title": "Lab Tests by Test Code",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "LBTESTCD",
+  "colorBy": "LBTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

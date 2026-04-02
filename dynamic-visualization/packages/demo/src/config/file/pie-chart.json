@@ -1,0 +1,10 @@
+{
+  "id": "file-pie-chart",
+  "type": "pie",
+  "title": "Sales by Category",
+  "xAxis": { "field": "category", "title": "Category" },
+  "yAxis": { "field": "sales", "title": "Sales ($)" },
+  "aggregation": "sum",
+  "groupBy": "category",
+  "enableSelection": false
+}

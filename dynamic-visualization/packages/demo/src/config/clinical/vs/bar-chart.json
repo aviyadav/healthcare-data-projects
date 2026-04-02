@@ -1,0 +1,12 @@
+{
+  "id": "vs-bar-chart",
+  "type": "bar",
+  "title": "Vital Sign Measurements by Test",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test", "axisType": "category" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "VSTESTCD",
+  "colorBy": "VSTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

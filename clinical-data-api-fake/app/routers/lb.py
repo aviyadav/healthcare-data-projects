@@ -26,5 +26,5 @@ _TABLE = "LB"
 async def get_laboratory_results(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[LBRecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[LBRecord](data=records, meta=meta)

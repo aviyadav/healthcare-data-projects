@@ -1,0 +1,10 @@
+{
+  "id": "lb-scatter-chart",
+  "type": "scatter",
+  "title": "Lab Result vs Upper Normal Limit",
+  "xAxis": { "field": "LBSTNRHI", "title": "Upper Normal Limit" },
+  "yAxis": { "field": "LBORRES", "title": "Observed Result" },
+  "marker": { "colorField": "LBTESTCD", "size": 7, "opacity": 0.6 },
+  "enableSelection": true,
+  "selectionMode": "lasso"
+}

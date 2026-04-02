@@ -1,0 +1,10 @@
+{
+  "id": "ae-histogram-chart",
+  "type": "histogram",
+  "title": "AEs by Outcome",
+  "xAxis": { "field": "AEOUT", "title": "Outcome", "axisType": "category" },
+  "colorBy": "AESEV",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

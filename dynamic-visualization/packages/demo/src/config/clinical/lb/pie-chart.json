@@ -1,0 +1,10 @@
+{
+  "id": "lb-pie-chart",
+  "type": "pie",
+  "title": "Lab Tests by Test Code",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "LBTESTCD",
+  "enableSelection": false
+}

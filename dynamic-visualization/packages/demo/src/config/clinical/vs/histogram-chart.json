@@ -1,0 +1,10 @@
+{
+  "id": "vs-histogram-chart",
+  "type": "histogram",
+  "title": "Vital Signs by Visit",
+  "xAxis": { "field": "VISIT", "title": "Visit", "axisType": "category" },
+  "colorBy": "VSTESTCD",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

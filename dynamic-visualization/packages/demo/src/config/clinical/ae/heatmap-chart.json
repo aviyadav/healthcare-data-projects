@@ -1,0 +1,10 @@
+{
+  "id": "ae-heatmap-chart",
+  "type": "heatmap",
+  "title": "AE Count: Body System × Severity",
+  "xAxis": { "field": "AEBODSYS", "title": "Body System" },
+  "yAxis": { "field": "AESEV", "title": "Severity" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "Reds" },
+  "enableSelection": false
+}

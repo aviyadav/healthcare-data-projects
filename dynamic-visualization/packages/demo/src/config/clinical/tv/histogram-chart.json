@@ -1,0 +1,10 @@
+{
+  "id": "tv-histogram-chart",
+  "type": "histogram",
+  "title": "Visit Distribution",
+  "xAxis": { "field": "VISIT", "title": "Visit", "axisType": "category" },
+  "colorBy": "ARMCD",
+  "marker": { "opacity": 0.75 },
+  "enableSelection": true,
+  "selectionMode": "box"
+}

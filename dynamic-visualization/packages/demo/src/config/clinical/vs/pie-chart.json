@@ -1,0 +1,10 @@
+{
+  "id": "vs-pie-chart",
+  "type": "pie",
+  "title": "Vital Sign Measurements by Test",
+  "xAxis": { "field": "VSTESTCD", "title": "Vital Sign Test" },
+  "yAxis": { "field": "_count", "title": "Count" },
+  "aggregation": "count",
+  "groupBy": "VSTESTCD",
+  "enableSelection": false
+}

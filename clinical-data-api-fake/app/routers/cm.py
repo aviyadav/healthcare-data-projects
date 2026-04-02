@@ -26,5 +26,5 @@ _TABLE = "CM"
 async def get_concomitant_medications(
     filters: Annotated[dict, Depends(common_filters)],
 ) -> PaginatedResponse[CMRecord]:
-    records, meta = fetch_domain_data(table=_TABLE, **filters)
+    records, meta = await fetch_domain_data(table=_TABLE, **filters)
     return PaginatedResponse[CMRecord](data=records, meta=meta)

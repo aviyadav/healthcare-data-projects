@@ -1,0 +1,10 @@
+{
+  "id": "lb-box-chart",
+  "type": "box",
+  "title": "Lab Result Distribution by Test",
+  "xAxis": { "field": "LBTESTCD", "title": "Test Code" },
+  "yAxis": { "field": "LBORRES", "title": "Observed Result" },
+  "colorBy": "LBTESTCD",
+  "enableSelection": true,
+  "selectionMode": "box"
+}

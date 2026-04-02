@@ -1,0 +1,10 @@
+{
+  "id": "cm-heatmap-chart",
+  "type": "heatmap",
+  "title": "CM Count: Category × Route",
+  "xAxis": { "field": "CMCAT", "title": "Category" },
+  "yAxis": { "field": "CMROUTE", "title": "Route" },
+  "zAxis": { "field": "_count", "title": "Count" },
+  "marker": { "colorScale": "Blues" },
+  "enableSelection": false
+}
