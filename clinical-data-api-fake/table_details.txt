@@ -1,0 +1,155 @@
+show tables;
+┌─────────┐
+│  name   │
+│ varchar │
+├─────────┤
+│ AE      │
+│ CM      │
+│ DM      │
+│ LB      │
+│ TV      │
+│ VS      │
+└─────────┘
+D describe select * from AE;
+┌───────────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│    column_name    │ column_type │  null   │   key   │ default │  extra  │
+│      varchar      │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├───────────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY             │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE              │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT           │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT             │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM              │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN            │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AESEQ             │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ AETERM            │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AEDECOD           │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AEBODSYS          │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AESTDTC           │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ AEENDTC           │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ AESEV             │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AEREL             │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AEOUT             │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AE_INCIDENT_GROUP │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITEID            │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID           │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ USUBJID           │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├───────────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 19 rows                                                       6 columns │
+└─────────────────────────────────────────────────────────────────────────┘
+D describe select * from CM;
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMSEQ       │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMTRT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMDECOD     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMCAT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMSTDTC     │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMENDTC     │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMDOSE      │ DOUBLE      │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMDOSU      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMDOSFRM    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMROUTE     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ CMDOSFRQ    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITEID      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ USUBJID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 20 rows                                                 6 columns │
+└───────────────────────────────────────────────────────────────────┘
+D describe select * from DM;
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ AGE         │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ SEX         │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ RACE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ COUNTRY     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DMDTC       │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ ARM         │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITEID      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ USUBJID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 15 rows                                                 6 columns │
+└───────────────────────────────────────────────────────────────────┘
+D describe select * from LB;
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBTESTCD    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBTEST      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBORRES     │ DOUBLE      │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBORRESU    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBSTNRLO    │ DOUBLE      │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBSTNRHI    │ DOUBLE      │ YES     │ NULL    │ NULL    │ NULL    │
+│ LBDTC       │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITEID      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ USUBJID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 16 rows                                                 6 columns │
+└───────────────────────────────────────────────────────────────────┘
+D describe select * from TV;
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISITNUM    │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ TVSTRL      │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ TVENRL      │ BIGINT      │ YES     │ NULL    │ NULL    │ NULL    │
+│ ARMCD       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 11 rows                                                 6 columns │
+└───────────────────────────────────────────────────────────────────┘
+D describe select * from VS;
+┌─────────────┬─────────────┬─────────┬─────────┬─────────┬─────────┐
+│ column_name │ column_type │  null   │   key   │ default │  extra  │
+│   varchar   │   varchar   │ varchar │ varchar │ varchar │ varchar │
+├─────────────┼─────────────┼─────────┼─────────┼─────────┼─────────┤
+│ STUDY       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITE        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ SUBJECT     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VISIT       │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ FORM        │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ DOMAIN      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VSTESTCD    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VSTEST      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VSORRES     │ DOUBLE      │ YES     │ NULL    │ NULL    │ NULL    │
+│ VSORRESU    │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ VSDTC       │ DATE        │ YES     │ NULL    │ NULL    │ NULL    │
+│ SITEID      │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ STUDYID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+│ USUBJID     │ VARCHAR     │ YES     │ NULL    │ NULL    │ NULL    │
+├─────────────┴─────────────┴─────────┴─────────┴─────────┴─────────┤
+│ 14 rows                                                 6 columns │
+└───────────────────────────────────────────────────────────────────┘

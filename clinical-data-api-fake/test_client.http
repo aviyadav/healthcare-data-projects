@@ -1,0 +1,149 @@
+@baseUrl = http://localhost:8090
+
+
+### ─── System ──────────────────────────────────────────────────────────────────
+
+### Health check
+GET {{baseUrl}}/health
+
+###
+
+### List available domains
+GET {{baseUrl}}/api/v1/domains
+
+
+### ─── AE — Adverse Events ────────────────────────────────────────────────────
+
+### Default page (100 records)
+GET {{baseUrl}}/api/v1/ae
+
+###
+
+### Custom page size
+GET {{baseUrl}}/api/v1/ae?page_size=10
+
+###
+
+### Second page
+GET {{baseUrl}}/api/v1/ae?page=2&page_size=10
+
+###
+
+### Filter by study
+GET {{baseUrl}}/api/v1/ae?study=STUDY-001
+
+###
+
+### Filter by study + site
+GET {{baseUrl}}/api/v1/ae?study=STUDY-001&site=SITE-001
+
+###
+
+### Filter by subject
+GET {{baseUrl}}/api/v1/ae?subject=STUDY-001-SITE-001-0039817b
+
+###
+
+### Non-matching filter returns empty data (not an error)
+GET {{baseUrl}}/api/v1/ae?study=DOES_NOT_EXIST
+
+
+### ─── CM — Concomitant Medications ───────────────────────────────────────────
+
+### Default page
+GET {{baseUrl}}/api/v1/cm
+
+###
+
+### Filter by study
+GET {{baseUrl}}/api/v1/cm?study=STUDY-001&page_size=20
+
+###
+
+### Filter by visit
+GET {{baseUrl}}/api/v1/cm?visit=VISIT 1&page_size=10
+
+
+### ─── DM — Demographics ──────────────────────────────────────────────────────
+
+### Default page
+GET {{baseUrl}}/api/v1/dm
+
+###
+
+### Filter by study + site
+GET {{baseUrl}}/api/v1/dm?study=STUDY-001&site=SITE-001&page_size=20
+
+###
+
+### Filter by subject
+GET {{baseUrl}}/api/v1/dm?subject=STUDY-001-SITE-001-0039817b
+
+
+### ─── LB — Laboratory Results ────────────────────────────────────────────────
+
+### Default page
+GET {{baseUrl}}/api/v1/lb
+
+###
+
+### Filter by study
+GET {{baseUrl}}/api/v1/lb?study=STUDY-001&page_size=20
+
+###
+
+### Filter by visit
+GET {{baseUrl}}/api/v1/lb?visit=VISIT 1&page_size=10
+
+
+### ─── TV — Trial Visits ──────────────────────────────────────────────────────
+
+### Default page
+GET {{baseUrl}}/api/v1/tv
+
+###
+
+### Filter by study
+GET {{baseUrl}}/api/v1/tv?study=STUDY-001&page_size=20
+
+###
+
+### Filter by visit
+GET {{baseUrl}}/api/v1/tv?visit=VISIT 1&page_size=10
+
+
+### ─── VS — Vital Signs ───────────────────────────────────────────────────────
+
+### Default page
+GET {{baseUrl}}/api/v1/vs
+
+###
+
+### Filter by study
+GET {{baseUrl}}/api/v1/vs?study=STUDY-001&page_size=20
+
+###
+
+### Filter by subject + visit
+GET {{baseUrl}}/api/v1/vs?subject=STUDY-001-SITE-001-0039817b&visit=VISIT 1
+
+
+### ─── Pagination edge cases ──────────────────────────────────────────────────
+
+### Page beyond total — returns empty data array
+GET {{baseUrl}}/api/v1/ae?page=999999
+
+###
+
+### Maximum allowed page_size
+GET {{baseUrl}}/api/v1/ae?page_size=1000
+
+###
+
+### Invalid page (0) — returns 422
+GET {{baseUrl}}/api/v1/ae?page=0
+
+###
+
+### page_size exceeds maximum (1000) — returns 422
+GET {{baseUrl}}/api/v1/ae?page_size=9999
