@@ -133,6 +133,13 @@ def generate_chunk(args):
         race = random.choice(["WHITE", "BLACK", "ASIAN", "OTHER"])
         
         dm_rows.append({
+            # Mandatory context attributes
+            "STUDY": study,
+            "SITE": site,
+            "SUBJECT": usubjid,
+            "VISIT": "SCREENING",
+            "FORM": "DM",
+            # Domain-specific attributes
             "STUDYID": study,
             "SITEID": site,
             "USUBJID": usubjid,
@@ -151,6 +158,13 @@ def generate_chunk(args):
             term = random.choice(AE_TERMS)
             start_date = fake.date_between(start_date='-1y', end_date='today')
             ae_rows.append({
+                # Mandatory context attributes
+                "STUDY": study,
+                "SITE": site,
+                "SUBJECT": usubjid,
+                "VISIT": f"VISIT {seq}",
+                "FORM": "AE",
+                # Domain-specific attributes
                 "STUDYID": study,
                 "SITEID": site,
                 "USUBJID": usubjid,
@@ -164,12 +178,13 @@ def generate_chunk(args):
                 "AESEV": random.choice(SEVERITY),
                 "AEREL": random.choice(RELATIONSHIP),
                 "AEOUT": "RECOVERED",
-                "AE_INCIDENT_GROUP": random.choice(["TypeA", "TypeB"]) 
+                "AE_INCIDENT_GROUP": random.choice(["TypeA", "TypeB"])
             })
 
         # VS Generation
         num_visits = random.randint(1, 8)
         for visit_num in range(1, num_visits + 1):
+            visit_label = f"VISIT {visit_num}"
             visit_date = fake.date_between(start_date='-1y', end_date='today')
             for testcd, testname, unit in VS_TESTS:
                 val = 0.0
@@ -178,8 +193,15 @@ def generate_chunk(args):
                 elif testcd == "HR": val = float(random.randint(50, 100))
                 elif testcd == "TEMP": val = round(random.uniform(36.0, 38.0), 1)
                 elif testcd == "WEIGHT": val = round(random.uniform(50.0, 120.0), 1)
-                
+
                 vs_rows.append({
+                    # Mandatory context attributes
+                    "STUDY": study,
+                    "SITE": site,
+                    "SUBJECT": usubjid,
+                    "VISIT": visit_label,
+                    "FORM": "VS",
+                    # Domain-specific attributes
                     "STUDYID": study,
                     "SITEID": site,
                     "USUBJID": usubjid,
@@ -188,7 +210,6 @@ def generate_chunk(args):
                     "VSTEST": testname,
                     "VSORRES": val,
                     "VSORRESU": unit,
-                    "VISIT": f"VISIT {visit_num}",
                     "VSDTC": visit_date
                 })
 
@@ -200,8 +221,15 @@ def generate_chunk(args):
             # Some medications are ongoing, some have ended
             ongoing = random.choice([True, False])
             end_date = None if ongoing else fake.date_between(start_date=start_date, end_date='today')
-            
+
             cm_rows.append({
+                # Mandatory context attributes
+                "STUDY": study,
+                "SITE": site,
+                "SUBJECT": usubjid,
+                "VISIT": f"VISIT {seq}",
+                "FORM": "CM",
+                # Domain-specific attributes
                 "STUDYID": study,
                 "SITEID": site,
                 "USUBJID": usubjid,
@@ -222,6 +250,7 @@ def generate_chunk(args):
         # LB Generation (Laboratory Tests)
         # Generate lab results for each visit (aligned with VS visits)
         for visit_num in range(1, num_visits + 1):
+            visit_label = f"VISIT {visit_num}"
             visit_date = fake.date_between(start_date='-1y', end_date='today')
             for testcd, testname, unit, low_normal, high_normal in LB_TESTS:
                 # Generate realistic values: 80% within normal range, 20% outside
@@ -234,8 +263,15 @@ def generate_chunk(args):
                         val = round(random.uniform(low_normal * 0.5, low_normal), 2)
                     else:
                         val = round(random.uniform(high_normal, high_normal * 1.5), 2)
-                
+
                 lb_rows.append({
+                    # Mandatory context attributes
+                    "STUDY": study,
+                    "SITE": site,
+                    "SUBJECT": usubjid,
+                    "VISIT": visit_label,
+                    "FORM": "LB",
+                    # Domain-specific attributes
                     "STUDYID": study,
                     "SITEID": site,
                     "USUBJID": usubjid,
@@ -246,28 +282,29 @@ def generate_chunk(args):
                     "LBORRESU": unit,
                     "LBSTNRLO": low_normal,
                     "LBSTNRHI": high_normal,
-                    "VISIT": f"VISIT {visit_num}",
                     "LBDTC": visit_date
                 })
 
-    # TV Generation (Trial Visits) - Study level, not subject level
-    # Generate once per study, not per subject
-    # We'll generate TV for each unique study
-    studies_seen = set()
-    for dm_row in dm_rows:
-        study = dm_row["STUDYID"]
-        if study not in studies_seen:
-            studies_seen.add(study)
-            for visitnum, visit, planned_day, window in TV_VISITS:
-                tv_rows.append({
-                    "STUDYID": study,
-                    "DOMAIN": "TV",
-                    "VISITNUM": visitnum,
-                    "VISIT": visit,
-                    "TVSTRL": planned_day - window,
-                    "TVENRL": planned_day + window,
-                    "ARMCD": "ALL"
-                })
+    # TV Generation (Trial Visits) — Study-level, one schedule per unique STUDYID.
+    # Collect unique studies seen during subject generation, then emit TV rows.
+    studies_in_chunk = {row["STUDYID"] for row in dm_rows}
+    for study_id in sorted(studies_in_chunk):
+        for visitnum, visit, planned_day, window in TV_VISITS:
+            tv_rows.append({
+                # Mandatory context attributes
+                "STUDY": study_id,
+                "SITE": "ALL",
+                "SUBJECT": "ALL",
+                "VISIT": visit,
+                "FORM": "TV",
+                # Domain-specific attributes
+                "STUDYID": study_id,
+                "DOMAIN": "TV",
+                "VISITNUM": visitnum,
+                "TVSTRL": planned_day - window,
+                "TVENRL": planned_day + window,
+                "ARMCD": "ALL"
+            })
 
     # Convert to Polars DataFrames and Write
     if dm_rows:
@@ -297,19 +334,27 @@ def generate_chunk(args):
     return len(dm_rows), len(ae_rows), len(vs_rows), len(cm_rows), len(lb_rows), len(tv_rows)
 
 def _write_dataset(df, base_path, domain, partition_cols, chunk_id):
-    table = df.to_arrow()
     path = os.path.join(base_path, domain)
-    
+
     # Use chunk_id and uuid in filename to avoid collisions
     unique_id = uuid.uuid4().hex[:6]
-    # PyArrow replaces {i} with an incrementing integer.
-    # We append chunk_id and unique_id to ensure global uniqueness across processes.
     fname = "part-{i}-" + f"{chunk_id}-{unique_id}.parquet"
-    
+
+    # Build a partitioning object that preserves partition columns in the files.
+    # Using DirectoryPartitioning so column values appear in directory names AND
+    # remain embedded in each parquet file — mandatory attributes are always readable
+    # regardless of whether the consumer is partition-aware.
+    partitioning = ds.partitioning(
+        pa.schema([pa.field(col, pa.string()) for col in partition_cols]),
+        flavor="hive"
+    )
+
+    table = df.to_arrow()
+
     ds.write_dataset(
-        table, 
-        base_dir=path, 
-        partitioning=partition_cols, 
+        table,
+        base_dir=path,
+        partitioning=partitioning,
         format="parquet",
         existing_data_behavior="overwrite_or_ignore",
         basename_template=fname

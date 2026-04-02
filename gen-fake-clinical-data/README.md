@@ -1,247 +1,236 @@
 # Clinical Data Generator
 
-A high-performance Python tool for generating realistic fake clinical trial data following CDISC SDTM (Study Data Tabulation Model) standards. Uses multiprocessing to efficiently generate millions of records across multiple clinical domains.
+A high-performance Python tool for generating realistic fake clinical trial data following **CDISC SDTM** (Study Data Tabulation Model) standards. Uses multiprocessing to efficiently generate millions of records across multiple clinical domains, writing partitioned Parquet files with all attributes embedded in each file.
 
 ## Features
 
-- **Six CDISC SDTM Domains**: Generates comprehensive clinical trial data
+- **Six CDISC SDTM Domains**: DM, AE, VS, CM, LB, and TV
+- **Mandatory Context Attributes**: Every record carries `STUDY`, `SITE`, `SUBJECT`, `VISIT`, and `FORM` for consistent cross-domain filtering
 - **High Performance**: Leverages multiprocessing to generate 1M+ records in seconds
-- **Realistic Data**: Includes proper distributions, normal ranges, and clinical relationships
-- **Partitioned Output**: Data written as partitioned Parquet files for efficient querying
-- **Scalable**: Easily configurable to generate datasets of any size
+- **Realistic Data**: Proper distributions, normal ranges, and clinical relationships
+- **Hive-Partitioned Output**: Parquet files partitioned by key columns; partition values are **embedded in each file** so they are readable without partition-awareness
+- **DuckDB Ready**: Load all domains into DuckDB for SQL querying and analysis
+
+## Mandatory Attributes
+
+Every row in every domain includes these five standard context attributes, enabling uniform filtering and joining across all datasets:
+
+| Attribute | Description | Example |
+|-----------|-------------|---------|
+| `STUDY`   | Study identifier | `STUDY-001` |
+| `SITE`    | Site identifier  | `SITE-003` |
+| `SUBJECT` | Subject identifier (USUBJID) | `STUDY-001-SITE-003-abc12345` |
+| `VISIT`   | Visit label | `VISIT 2`, `SCREENING` |
+| `FORM`    | Domain/form name | `DM`, `AE`, `VS`, `CM`, `LB`, `TV` |
+
+> **Note**: For TV (Trial Visits), which is a study-level dataset, `SITE` and `SUBJECT` are set to `"ALL"`.
 
 ## Supported Domains
 
 ### 1. **DM** (Demographics)
 Subject-level demographic information including age, sex, race, country, and treatment arm.
+- `VISIT` = `"SCREENING"` (fixed for the demographics form)
 
 ### 2. **AE** (Adverse Events)
 Adverse events experienced by subjects with severity, relationship to treatment, body system, and outcomes.
+- Generated 0–15 adverse events per subject
+- `VISIT` aligned to the event sequence number
 
 ### 3. **VS** (Vital Signs)
-Vital sign measurements including blood pressure, heart rate, temperature, weight, and BMI across multiple visits.
+Vital sign measurements including blood pressure, heart rate, temperature, and weight across multiple visits.
+- 1–8 visits per subject
+- Tests: SYSBP, DIABP, HR, TEMP, WEIGHT, BMI, SBP, DBP
 
 ### 4. **CM** (Concomitant Medications)
 Medications taken by subjects during the study with dosing information, routes, and frequencies.
 - 15 common medications (Aspirin, Metformin, Lisinopril, etc.)
 - Realistic dosing, routes (ORAL, IV, TOPICAL, etc.)
-- Ongoing and completed medications
+- Mix of ongoing and completed medications
 
 ### 5. **LB** (Laboratory)
 Laboratory test results covering hematology and chemistry panels.
 - 18 lab tests (WBC, RBC, HGB, HCT, PLT, GLUC, BUN, CREAT, ALT, AST, BILI, etc.)
-- Realistic values: 80% within normal range, 20% abnormal
-- Normal range references included
+- Realistic values: 80% within normal range, 20% abnormal (high/low)
+- Normal range references (`LBSTNRLO`, `LBSTNRHI`) included
 
 ### 6. **TV** (Trial Visits)
-Planned visit schedule for the study with visit windows.
-- 8 planned visits from SCREENING to END OF TREATMENT
-- Visit windows (tolerance periods)
-- Study days ranging from day -14 to day 140
+Planned visit schedule — **study-level**, generated once per unique `STUDYID`, not per subject.
+- 8 planned visits: SCREENING → BASELINE → WEEK 2/4/8/12/16 → END OF TREATMENT
+- Study days ranging from day −14 to day 140
+- Visit windows (tolerance periods) encoded in `TVSTRL` / `TVENRL`
 
 ## Installation
 
-This project uses `uv` for dependency management. Make sure you have Python 3.x installed.
+This project uses `uv` for dependency management and requires **Python ≥ 3.14**.
 
 ```bash
 # Clone the repository
 git clone <repository-url>
 cd gen-fake-clinical-data
 
-# Install dependencies (if using uv)
+# Install dependencies with uv (recommended)
 uv sync
 
-# Or create a virtual environment manually
+# Or with pip in a virtual environment
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-pip install polars pyarrow faker numpy
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install polars pyarrow faker numpy duckdb
 ```
+
+### Dependencies
+
+| Package    | Version   | Purpose                              |
+|------------|-----------|--------------------------------------|
+| `polars`   | ≥ 1.38.1  | DataFrame construction and I/O       |
+| `pyarrow`  | ≥ 23.0.0  | Partitioned Parquet writing          |
+| `faker`    | ≥ 40.4.0  | Realistic synthetic data generation  |
+| `numpy`    | ≥ 2.4.2   | Numeric distributions                |
+| `duckdb`   | ≥ 1.4.4   | SQL querying over Parquet files      |
 
 ## Usage
 
-### Basic Usage
+### Generate Data
 
 ```bash
-# Activate virtual environment
 source .venv/bin/activate
-
-# Run the generator
 python gen_clinical.py
 ```
 
-### Configuration
+### Configure Volume
 
 Edit `gen_clinical.py` to adjust the number of subjects:
 
 ```python
-# Line ~180
 total_subjects = 5000  # Change this value
 ```
 
-**Estimated Record Counts:**
-- 5,000 subjects → ~1.1M records
-- 10,000 subjects → ~2.2M records
-- 40,000 subjects → ~8.8M records
+**Estimated Record Counts (5,000 subjects):**
 
-### Output
+| Domain | Records |
+|--------|---------|
+| DM     | 5,000   |
+| AE     | ~38,000 |
+| VS     | ~679,000 |
+| CM     | ~12,500 |
+| LB     | ~407,000 |
+| TV     | ~200    |
+| **Total** | **~1.1M** |
 
-Data is written to `clinical_data_output/` directory with the following structure:
+### Output Structure
 
 ```
 clinical_data_output/
-├── DM/          # Demographics
-├── AE/          # Adverse Events
-├── VS/          # Vital Signs
-├── CM/          # Concomitant Medications
-├── LB/          # Laboratory
-└── TV/          # Trial Visits
+├── DM/          # Demographics          → partitioned by STUDY/SITE/SUBJECT
+├── AE/          # Adverse Events        → partitioned by STUDY/SITE/SUBJECT/AE_INCIDENT_GROUP
+├── VS/          # Vital Signs           → partitioned by STUDY/SITE/SUBJECT
+├── CM/          # Concomitant Meds      → partitioned by STUDY/SITE/SUBJECT
+├── LB/          # Laboratory            → partitioned by STUDY/SITE/SUBJECT
+└── TV/          # Trial Visits          → partitioned by STUDY
 ```
 
-Each domain is partitioned for efficient querying:
-- **DM, VS, CM, LB**: Partitioned by `STUDYID / SITEID / USUBJID`
-- **AE**: Partitioned by `STUDYID / SITEID / USUBJID / AE_INCIDENT_GROUP`
-- **TV**: Partitioned by `STUDYID` (study-level data)
+Partition columns use **hive-style** directory naming (`col=value/`) and are **also kept inside each Parquet file**, so data is fully readable without a partition-aware reader.
 
-## Performance
-
-**Benchmark (5,000 subjects):**
-- **Total Records**: 1,142,203
-- **Generation Time**: ~15 seconds
-- **Processes Used**: 13 (CPU count - 1)
-
-**Record Breakdown:**
-- DM: 5,000 records
-- AE: ~38,000 records
-- VS: ~679,000 records
-- CM: ~12,500 records
-- LB: ~407,000 records
-- TV: ~200 records
-
-## Data Verification
-
-Use the included `verification.py` script to inspect the generated data:
+## Load into DuckDB
 
 ```bash
-python verification.py
-```
-
-Or use Polars directly:
-
-```python
-import polars as pl
-
-# Read any domain
-cm = pl.read_parquet('clinical_data_output/CM/**/*.parquet')
-print(cm.head())
-print(f"Total CM records: {len(cm)}")
-```
-
-## Loading Data into DuckDB
-
-For easier querying and analysis, you can load all the data into a DuckDB database:
-
-```bash
-# Load all domains into DuckDB
 python load_to_duckdb.py
 ```
 
-This creates a `clinical_data.duckdb` file (~7.5 MB) with all six domains as tables.
+This creates `clinical_data.duckdb` (~15 MB) with all six domains as tables.
 
-### Query the Database
+### Query with Python (Polars)
 
-**From Python:**
 ```python
 import duckdb
 
 con = duckdb.connect('clinical_data.duckdb', read_only=True)
 
-# Simple query
-df = con.execute("SELECT * FROM DM LIMIT 10").df()
+# Return results as a Polars DataFrame
+df = con.execute("SELECT * FROM DM LIMIT 10").pl()
 print(df)
 
-# Cross-domain analysis
+# Cross-domain join → Polars DataFrame
 query = '''
-    SELECT 
+    SELECT
+        dm.STUDY,
         dm.ARM,
-        COUNT(DISTINCT dm.USUBJID) as subjects,
-        COUNT(ae.AESEQ) as total_aes,
-        ROUND(COUNT(ae.AESEQ) * 1.0 / COUNT(DISTINCT dm.USUBJID), 2) as aes_per_subject
+        COUNT(DISTINCT dm.USUBJID) AS subjects,
+        COUNT(ae.AESEQ)            AS total_aes,
+        ROUND(COUNT(ae.AESEQ) * 1.0 / COUNT(DISTINCT dm.USUBJID), 2) AS aes_per_subject
     FROM DM dm
     LEFT JOIN AE ae ON dm.USUBJID = ae.USUBJID
-    GROUP BY dm.ARM
+    GROUP BY dm.STUDY, dm.ARM
+    ORDER BY dm.STUDY, dm.ARM
 '''
-result = con.execute(query).df()
+result = con.execute(query).pl()
 print(result)
 
 con.close()
 ```
 
-**From Command Line:**
+### Query from the Command Line
+
 ```bash
-# Run a query
+# Quick query
 duckdb clinical_data.duckdb "SELECT ARM, COUNT(*) FROM DM GROUP BY ARM"
 
-# Interactive mode
+# Interactive REPL
 duckdb clinical_data.duckdb
 ```
 
-**See [DUCKDB_GUIDE.md](DUCKDB_GUIDE.md) for comprehensive query examples and usage tips.**
+**See [DUCKDB_GUIDE.md](DUCKDB_GUIDE.md) for comprehensive query examples.**
 
-## Domain Details
+### Query Parquet Directly with Polars
 
-### CM (Concomitant Medications)
-- **Medications**: 15 common drugs across therapeutic areas
-- **Fields**: Medication name, indication, dose, route, frequency, start/end dates
-- **Generation**: 0-5 medications per subject
-- **Realism**: Mix of ongoing and completed medications
+```python
+import polars as pl
 
-### LB (Laboratory)
-- **Test Panels**: Hematology (7 tests) + Chemistry (11 tests)
-- **Fields**: Test code, test name, result value, units, normal ranges
-- **Generation**: All tests for each visit (aligned with VS visits)
-- **Realism**: 80% values within normal range, 20% abnormal (high/low)
+# Read any domain (all attributes available, including mandatory ones)
+df = pl.read_parquet('clinical_data_output/CM/**/*.parquet')
+print(df.select(["STUDY", "SITE", "SUBJECT", "VISIT", "FORM", "CMTRT"]).head())
 
-### TV (Trial Visits)
-- **Visits**: 8 planned visits over 154 days
-- **Fields**: Visit number, visit name, planned day, visit window
-- **Generation**: Study-level (not subject-level)
-- **Schedule**: SCREENING (-14d) → BASELINE (1d) → Weekly visits → END OF TREATMENT (140d)
+# Filter using mandatory attributes
+aes = (
+    pl.read_parquet('clinical_data_output/AE/**/*.parquet')
+    .filter(pl.col("STUDY") == "STUDY-001")
+)
+```
+
+## Data Verification
+
+```bash
+python verification.py
+```
 
 ## Technical Details
 
-- **Language**: Python 3.x
-- **Dependencies**: Polars, PyArrow, Faker, NumPy
-- **Parallelization**: Multiprocessing with automatic CPU detection
-- **Output Format**: Partitioned Parquet files
-- **Data Standards**: CDISC SDTM compliant
+- **Language**: Python ≥ 3.14
+- **Parallelization**: `multiprocessing.Pool` with `cpu_count() - 1` workers
+- **Output Format**: Hive-partitioned Parquet (partition columns embedded in files)
+- **DataFrame Library**: Polars (build) + PyArrow (write)
+- **Data Standard**: CDISC SDTM-aligned
 
 ## Customization
 
-### Adding More Medications
-
-Edit the `CM_MEDICATIONS` constant in `gen_clinical.py`:
+### Adding Medications
 
 ```python
 CM_MEDICATIONS = [
     ("MEDCODE", "Medication Name", "Indication"),
-    # Add more medications here
+    # Add entries here
 ]
 ```
 
-### Adding More Lab Tests
-
-Edit the `LB_TESTS` constant:
+### Adding Lab Tests
 
 ```python
 LB_TESTS = [
     ("TESTCD", "Test Name", "Unit", low_normal, high_normal),
-    # Add more tests here
+    # Add entries here
 ]
 ```
 
-### Modifying Visit Schedule
-
-Edit the `TV_VISITS` constant:
+### Modifying the Visit Schedule
 
 ```python
 TV_VISITS = [
@@ -253,11 +242,3 @@ TV_VISITS = [
 ## License
 
 [Add your license here]
-
-## Contributing
-
-[Add contribution guidelines here]
-
-## Contact
-
-[Add contact information here]
